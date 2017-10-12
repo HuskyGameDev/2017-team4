@@ -81,7 +81,7 @@
   
 **GAME SPECS**
 
-* RULES
+* *RULES*
   * Player’s main objective is to complete each song in the game
   * During a song, the player only has control over:
     * Hitting notes from the rhythm mechanic
@@ -90,17 +90,17 @@
     * Song selection
     * Player stats screen (where player can increase player stats)
 
-* INTERACTIONS
+* *INTERACTIONS*
   * During a control, the player mostly interacts with the rhythm mechanic. The player uses keypresses to hit notes with appropriate timing, and this boosts the success of the combat actions. The player can also choose which action the player focuses on, but the player character will automatically execute the focused action by use of an ATB gauge.
   * Otherwise, the player can interact with various menus outside of playing songs. This includes the song selection menu where the player can view the complete list of songs and their respective difficulties. The other menu is a player stat menu where the attack, defense, and evasion of the player character can be viewed and potentially increased by spending points gained from playing songs. 
 
-* USER INTERFACE
+* *USER INTERFACE*
   * Main gameplay screen (see concept sketch)
     * Features the main rhythm and combat mechanics
     * Incorporates cyberpunk theme by use of retro-computerized look with advanced functionality (hightech/lowlife)
   * Main menus will feature similar cyberpunk aesthetics, but will only have components for selection (song selection, viewing player stats)
 
-* LIST OF MECHANICS
+* *LIST OF MECHANICS*
   * Rhythm
     * Precisely hit notes
     * Consecutive hits turn into combos
@@ -134,43 +134,43 @@
     * Enemies will have stats of their own, and difficulty modifiers will make these stats greater
     * Points from the cumulative score can be spent on boosting player stats through use of an in-game store.
   
-* ART
+* *ART*
   * Artwork will focus heavily on the hightech/lowlife cyberpunk theme. As the player character is mostly represented through a digital avatar on a computer screen, the UI for the game will look like a retro computer monitor that also has advanced functionality. This is to highlight the hightech/lowlife aspect of cyberpunk.
 
-* SOUND
+* *SOUND*
   * The sound for the game will also fit with the cyberpunk theme. In game sound (simple button presses) will be a digitized sound reminiscent of retro computer technology.
   * The music used for the songs/levels will feature elements of jazz which fits well with the lowlife aspects of cyberpunk.
    
 **TECHNICAL SPECS**
 
-* TARGET PLATFORM
+* *TARGET PLATFORM*
   * PC
  
-* IMPLEMENTATION DETAILS
+* *IMPLEMENTATION DETAILS*
   * Unreal Engine 4
   * Paper 2D
   * Blueprint system
   
 **TIMELINE**
 
-* Sprint 1
+* *Sprint 1*
   * Have working rhythm mechanic
   * One set of notes (sample beat)
   * Recognize precision of hitting notes
   * Enough UI to support gameplay
 
-* Sprint 2
+* *Sprint 2*
   * Have other three sets of notes
   * Track score and actions
   * Include sounds and art
   * Flesh out UI and menus
 
-* Sprint 3
+* *Sprint 3*
   * Have one complete level with enemies
   * Player can see and upgrade stats
   * Have difficulty modifiers
 
-* Next semester:
+* *Next semester:*
   * Add more levels/songs
   * Add several unique combos bonuses for consecutively hitting notes
   * Save high scores and have a “records” menu
