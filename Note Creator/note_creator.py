@@ -63,6 +63,7 @@ while 1:
     # Convert the time returned from seconds to milliseconds
     time1 = int(round(time.time() * 1000))
 
+    # Wait for user input
     note = getch()
 
     # Check to see if you are done
