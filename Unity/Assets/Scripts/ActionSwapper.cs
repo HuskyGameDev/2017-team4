@@ -5,6 +5,8 @@ using UnityEngine;
 public class ActionSwapper : MonoBehaviour
 {
 	private Animator anim;
+    private Animator animSuccess;
+    public ActionSuccess success;
 
 	// Index of the focused action
 	// 0 = Defend
@@ -16,6 +18,7 @@ public class ActionSwapper : MonoBehaviour
 	void Start()
 	{
 		anim = GetComponent<Animator>();
+        animSuccess = success.GetComponent<Animator>();
 		actionIndex = 1;
 	}
 
@@ -41,14 +44,17 @@ public class ActionSwapper : MonoBehaviour
 
 		switch (actionIndex)
 		{
-			case 1:
-				anim.Play("ShiftToAttack");
+            case 1:
+                anim.Play("ShiftToAttack");
+                animSuccess.Play("AttackSuccess");
 				break;
 			case 2:
 				anim.Play("ShiftToEvade");
+                animSuccess.Play("EvadeSuccess");
 				break;
 			default:
 				anim.Play("ShiftToDefend");
+                animSuccess.Play("DefendSuccess");
 				break;
 		}
 	}
