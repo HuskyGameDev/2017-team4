@@ -4,17 +4,43 @@ using UnityEngine;
 
 public class HitZone : MonoBehaviour
 {
-	public string key;
+    public string key;
+    private Queue<GameObject> noteQueue;
 
-	// Update is called once per frame
-	void Update()
-	{
-		if (Input.GetKeyDown(key))
-			Hit();		
-	}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Note")
+        {
+            noteQueue.Enqueue(other.gameObject);
+            //Debug.Log(noteQueue.Count);
+        }
+    }
 
-	void Hit()
-	{
-		//Debug.Log("You hit " + key);
-	}
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Note")
+        {
+            noteQueue.Dequeue();
+            //Debug.Log(noteQueue.Count);
+        }
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+        noteQueue = new Queue<GameObject>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Hit the first note in the queue
+        if (Input.GetKeyDown(key))
+        {
+            if (noteQueue.Count == 0)
+                return;
+            var note = noteQueue.Peek();
+            Destroy(note.gameObject);
+        }
+    }
 }

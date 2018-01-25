@@ -16,7 +16,7 @@ public class StartUp : MonoBehaviour
     {
         Info.SetSongIndex(2); // use this line for testing
         var song = Instantiate(Titles[Info.GetSongIndex()]);
-        song.PlayDelayed(3);
+        song.PlayDelayed(2.1F);
 
         float beatDelay = 60.0F / (float)Info.GetSongBpm();
         float noteDelay = 0.0F;
@@ -30,6 +30,7 @@ public class StartUp : MonoBehaviour
     void SpawnNotes()
     {
         var note = Instantiate(Notes[Random.Range(0, 4)]);
+        //var note = Instantiate(Notes[0]);
         note.SetSpeed(noteSpeed);
         noteCount--;
         if (noteCount <= 0)
