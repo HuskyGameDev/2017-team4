@@ -8,8 +8,8 @@ public class StartUp : MonoBehaviour
     public LevelInfo Info;
     public Note[] Notes;
 
-    private int noteCount;
-    private float noteSpeed;
+	private int noteCount;
+	private float noteSpeed;
 
     // Use this for initialization
     void Start()
