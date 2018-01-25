@@ -15,6 +15,6 @@ public class HitZone : MonoBehaviour
 
 	void Hit()
 	{
-		Debug.Log("You hit " + key);
+		//Debug.Log("You hit " + key);
 	}
 }
