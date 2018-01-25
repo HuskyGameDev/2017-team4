@@ -14,7 +14,7 @@ public class StartUp : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Info.SetSongIndex(2); // use this line for testing
+        //Info.SetSongIndex(2); // use this line for testing
         var song = Instantiate(Titles[Info.GetSongIndex()]);
         song.PlayDelayed(2.1F);
 
