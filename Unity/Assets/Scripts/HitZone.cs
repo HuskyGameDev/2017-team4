@@ -6,6 +6,7 @@ public class Hitzone : MonoBehaviour
 {
     public string key;
     public ScoreDisplay scoreDisplay;
+    public ActionSuccess actionSuccess;
     private Queue<GameObject> noteQueue;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -41,8 +42,9 @@ public class Hitzone : MonoBehaviour
             if (noteQueue.Count == 0)
                 return;
             var note = noteQueue.Peek();
-            scoreDisplay.IncreaseScore(1);
             Destroy(note.gameObject);
+            scoreDisplay.IncreaseScore(1);
+            actionSuccess.IncrementSuccess();
         }
     }
 }
