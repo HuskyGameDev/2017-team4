@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitZone : MonoBehaviour
+public class Hitzone : MonoBehaviour
 {
     public string key;
+    public ScoreDisplay scoreDisplay;
     private Queue<GameObject> noteQueue;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -40,6 +41,7 @@ public class HitZone : MonoBehaviour
             if (noteQueue.Count == 0)
                 return;
             var note = noteQueue.Peek();
+            scoreDisplay.IncreaseScore(1);
             Destroy(note.gameObject);
         }
     }

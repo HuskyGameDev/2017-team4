@@ -146,10 +146,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 122417249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fef8b12b0e6f934db4ea5b77fbbf873, type: 3}
+  m_Script: {fileID: 11500000, guid: e0b6d0574b94e3e43b449c2084ed105d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: e
+  scoreDisplay: {fileID: 1733762557}
 --- !u!58 &122417252
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -891,10 +892,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 606898868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fef8b12b0e6f934db4ea5b77fbbf873, type: 3}
+  m_Script: {fileID: 11500000, guid: e0b6d0574b94e3e43b449c2084ed105d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: r
+  scoreDisplay: {fileID: 1733762557}
 --- !u!58 &606898871
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1758,10 +1760,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1361793711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fef8b12b0e6f934db4ea5b77fbbf873, type: 3}
+  m_Script: {fileID: 11500000, guid: e0b6d0574b94e3e43b449c2084ed105d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: w
+  scoreDisplay: {fileID: 1733762557}
 --- !u!58 &1361793714
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1889,6 +1892,7 @@ GameObject:
   - component: {fileID: 1733762554}
   - component: {fileID: 1733762556}
   - component: {fileID: 1733762555}
+  - component: {fileID: 1733762557}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -1953,6 +1957,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1733762553}
+--- !u!114 &1733762557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733762553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8ed6e418e54d54d8457e5be5ae8fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1816375445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,10 +2405,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1884146446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fef8b12b0e6f934db4ea5b77fbbf873, type: 3}
+  m_Script: {fileID: 11500000, guid: e0b6d0574b94e3e43b449c2084ed105d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: q
+  scoreDisplay: {fileID: 1733762557}
 --- !u!58 &1884146449
 CircleCollider2D:
   m_ObjectHideFlags: 0
