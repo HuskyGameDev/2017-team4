@@ -6,8 +6,8 @@
 *Jacob Gust*  
 *Josh Kiger*  
 *Andy Merdzinski*  
-*Riley Mulford*
-*Jordan Gagnon* (Previous)
+*Riley Mulford*   
+*Jordan Gagnon*
    
 **GAME OVERVIEW**
 
