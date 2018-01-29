@@ -10,9 +10,13 @@ public class ActionSuccess : MonoBehaviour
     // 1 = Attack
     // 2 = Evade
     private int actionIndex;
+
     public GameObject[] indicators;
     public Text[] successRateDisplays;
     private int[] successRates;
+
+    private float xZero = 1.75F;
+    private float xRange = 6.1F;
 
     // Use this for initialization
     void Start()
@@ -20,26 +24,28 @@ public class ActionSuccess : MonoBehaviour
         successRates = new int[3] { 50, 50, 50 };
     }
 
-    public void IncrementSuccess()
+    /// <summary>
+    /// Adjusts the success rate.
+    /// </summary>
+    /// <param name="amount">Amount.</param>
+    public void AdjustSuccessRate(int amount)
     {
-        if (successRates[actionIndex] == 100)
-            return;        
-        indicators[actionIndex].transform.position 
-            = new Vector3(indicators[actionIndex].transform.position.x + 0.061F,
-            indicators[actionIndex].transform.position.y, 0);
-        successRates[actionIndex]++;
-        successRateDisplays[actionIndex].text = successRates[actionIndex].ToString();
-    }
+        // make the adjustment
+        successRates[actionIndex] += amount;
 
-    public void DecrementSuccess()
-    {
-        if (successRates[actionIndex] == 0)
-            return;        
-        indicators[actionIndex].transform.position 
-        = new Vector3(indicators[actionIndex].transform.position.x - 0.061F,
-            indicators[actionIndex].transform.position.y, 0);
-        successRates[actionIndex]--;
+        // maintain the range
+        if (successRates[actionIndex] < 0)
+            successRates[actionIndex] = 0;
+        if (successRates[actionIndex] > 100)
+            successRates[actionIndex] = 100;
+
+        // set the text
         successRateDisplays[actionIndex].text = successRates[actionIndex].ToString();
+
+        // set the position
+        var xPos = successRates[actionIndex] / 100F * xRange + xZero;
+        indicators[actionIndex].transform.position 
+            = new Vector3(xPos, indicators[actionIndex].transform.position.y, 0);
     }
 
     public void SetActionIndex(int index)

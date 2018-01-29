@@ -43,8 +43,9 @@ public class Hitzone : MonoBehaviour
                 return;
             var note = noteQueue.Peek();
             Destroy(note.gameObject);
+
             scoreDisplay.IncreaseScore(1);
-            actionSuccess.IncrementSuccess();
+            actionSuccess.AdjustSuccessRate(1);
         }
     }
 }
