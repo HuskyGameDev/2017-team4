@@ -3,11 +3,11 @@
 ### HGD 2017 Team 4:
 *Jeremy M. Barker*  
 *Nic Fosdick*  
-*Jordan Gagnon*  
 *Jacob Gust*  
 *Josh Kiger*  
 *Andy Merdzinski*  
-*Riley Mulford*  
+*Riley Mulford*
+*Jordan Gagnon* (Previous)
    
 **GAME OVERVIEW**
 
@@ -42,24 +42,26 @@
     * UI and menu design
   * Programmer
     * Incorporating art assets into game
+    * Implementation of Menus and UI
+    * General oversight and modularization
 
 * *JORDAN GAGNON*
-  * Programmer (Implementation of Rhythm Mechanic)
-    * Get detection of note successes and failures working
-    * Note layout
-    * Make sure notes spawn properly
+  * Programmer (Rhythm and Combat Specialist)
+    * Note spawning and hit detection
+    * Sprite and Menu placements
+    * Initial Combat Design
 
 * *NIC FOSDICK*
   * Programmer (Implementation of Rhythm Mechanic)
     * Switching actions of notes (Attack, Block, Evade)
-    * Note layout
+    * Note layout (Stepmania research)
     * Incorporate rhythm success with combat actions
 
 * *RILEY MULFORD*
   * Programmer (Combat Visualizations Architect)
-    * Implement general workings of combat mechanic
     * Implement ATB gauge and action execution
-    * Implement workings of player and enemy stats
+    * Enemy spawning and difficulty modification
+    * Research and implementation of balancing (stats/initial conditions)
 
 * *JOSH KIGER*
   * Programmer (Game State Management)
@@ -151,7 +153,7 @@
   * Paper 2D
   * Blueprint system
   
-**TIMELINE**
+**FALL 2017 - TIMELINE**
 
 * *Sprint 1*
   * Have working rhythm mechanic
@@ -175,3 +177,30 @@
   * Add several unique combos bonuses for consecutively hitting notes
   * Save high scores and have a “records” menu
   * Create a “theater” mode to just list to game’s music
+  
+**SPRING 2018 - TIMELINE**
+ 
+ * *Sprint 1*
+  * Finish Unity3D conversion
+  * Flesh out menu art (Give each menu matching aesthetic to the main menu)
+  * Research Note Spawning techniques (Stepmania style inspirations (*.sm files and parsing))
+
+* *Sprint 2*
+  * Finalize combat mechanics
+  * Execute all three types of actions with significant effects
+  * Flesh out stats mechanic (Stats impact combat)
+
+* *Sprint 3*
+  * Finalize note layouts for additional songs
+  * Balancing
+      * Stat purchasing follows a “curve” (higher level = higher cost)
+      * Selected difficulty impacts enemy spawning and initial conditions
+
+* *Sprint 4*
+  * Finalize each song/level:
+      * Unique combat and note layout designs for each level
+      * Incorporate progression within levels (stronger enemies after time)
+  * Finalize artwork and sound
+      * Incorporation of unique sprites for all enemies and effects
+      * Incorporate all animations
+      * Incorporation of all sound FX and music
