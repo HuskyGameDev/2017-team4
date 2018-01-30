@@ -5,11 +5,7 @@ using UnityEngine.UI;
 
 public class ActionSuccess : MonoBehaviour
 {
-    // Index of the focused action
-    // 0 = Defend
-    // 1 = Attack
-    // 2 = Evade
-    private int actionIndex;
+    public ActionSwapper actionSwapper;
 
     public GameObject[] indicators;
     public Text[] successRateDisplays;
@@ -30,6 +26,8 @@ public class ActionSuccess : MonoBehaviour
     /// <param name="amount">Amount.</param>
     public void AdjustSuccessRate(int amount)
     {
+        var actionIndex = actionSwapper.GetActionIndex();
+
         // make the adjustment
         successRates[actionIndex] += amount;
 
@@ -46,10 +44,5 @@ public class ActionSuccess : MonoBehaviour
         var xPos = successRates[actionIndex] / 100F * xRange + xZero;
         indicators[actionIndex].transform.position 
             = new Vector3(xPos, indicators[actionIndex].transform.position.y, 0);
-    }
-
-    public void SetActionIndex(int index)
-    {
-        actionIndex = index;
     }
 }

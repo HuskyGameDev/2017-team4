@@ -20,7 +20,6 @@ public class ActionSwapper : MonoBehaviour
         anim = GetComponent<Animator>();
         animSuccess = success.GetComponent<Animator>();
         actionIndex = 1;
-        success.SetActionIndex(actionIndex);
     }
 
     // Update is called once per frame
@@ -40,7 +39,6 @@ public class ActionSwapper : MonoBehaviour
     void SwapAction(int shiftValue)
     {
         actionIndex = (3 + actionIndex + shiftValue) % 3;
-        success.SetActionIndex(actionIndex);
         //Debug.Log(actionIndex);
         switch (actionIndex)
         {
@@ -57,5 +55,14 @@ public class ActionSwapper : MonoBehaviour
                 animSuccess.Play("DefendSuccess");
                 break;
         }
+    }
+
+    /// <summary>
+    /// Gets the index of focused action.
+    /// </summary>
+    /// <returns>The action index.</returns>
+    public int GetActionIndex()
+    {
+        return actionIndex;
     }
 }

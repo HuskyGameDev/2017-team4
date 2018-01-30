@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ATB : MonoBehaviour
 {
     public float maxFillTime;
-    private float fillTime;
     public GameObject fillBar;
+    public UnityEvent OnFill;
+
+    private float fillTime;
 
     // Use this for initialization
     void Start()
@@ -23,8 +26,7 @@ public class ATB : MonoBehaviour
         if (fillTime >= maxFillTime)
         {
             fillTime = 0;
-            // do other crazy stuff here
-            // such as performing actions
+            OnFill.Invoke();
         }
         var currentFill = fillTime / maxFillTime;
         fillBar.transform.localScale = new Vector3(Mathf.Clamp(currentFill, 0, 1), 1, 0);
