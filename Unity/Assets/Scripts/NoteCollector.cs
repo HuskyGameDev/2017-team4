@@ -11,6 +11,6 @@ public class NoteCollector : MonoBehaviour
         if (other.tag == "Note")
             Destroy(other.gameObject);
         
-        actionSuccess.AdjustSuccessRate(-1);
+        actionSuccess.AdjustSuccessRate(-2);
     }
 }

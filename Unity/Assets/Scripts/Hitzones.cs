@@ -49,20 +49,33 @@ public class Hitzones : MonoBehaviour
             var acc = (1.28F - Mathf.Abs(note.gameObject.transform.position.y - (-0.67F))) / 1.28;
 
             if (acc <= 0.25F)
-                Debug.Log("BAD");
+            {
+                //Debug.Log("BAD");
+                scoreDisplay.IncreaseScore(10);
+                actionSuccess.AdjustSuccessRate(-1);
+            }
             if (acc > 0.25F && acc <= 0.5F)
-                Debug.Log("OKAY");
+            {
+                //Debug.Log("OKAY");
+                scoreDisplay.IncreaseScore(25);
+                actionSuccess.AdjustSuccessRate(0);
+            }
             if (acc > 0.5F && acc <= 0.8F)
-                Debug.Log("GOOD");
+            {
+                //Debug.Log("GOOD");
+                scoreDisplay.IncreaseScore(50);
+                actionSuccess.AdjustSuccessRate(1);
+            }
             if (acc > 0.8F)
-                Debug.Log("PERFECT");
-            
-            scoreDisplay.IncreaseScore(1);
-            actionSuccess.AdjustSuccessRate(1);
+            {
+                //Debug.Log("PERFECT");
+                scoreDisplay.IncreaseScore(100);
+                actionSuccess.AdjustSuccessRate(2);
+            }
         }
         else
         {
-            actionSuccess.AdjustSuccessRate(-1);
+            actionSuccess.AdjustSuccessRate(-2);
             // break combo
         }
         Destroy(note.gameObject);
