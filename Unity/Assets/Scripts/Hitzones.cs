@@ -46,6 +46,17 @@ public class Hitzones : MonoBehaviour
         var note = noteQueue.Peek();
         if (note.GetNoteKey() == key)
         {
+            var acc = (1.28F - Mathf.Abs(note.gameObject.transform.position.y - (-0.67F))) / 1.28;
+
+            if (acc <= 0.25F)
+                Debug.Log("BAD");
+            if (acc > 0.25F && acc <= 0.5F)
+                Debug.Log("OKAY");
+            if (acc > 0.5F && acc <= 0.8F)
+                Debug.Log("GOOD");
+            if (acc > 0.8F)
+                Debug.Log("PERFECT");
+            
             scoreDisplay.IncreaseScore(1);
             actionSuccess.AdjustSuccessRate(1);
         }
