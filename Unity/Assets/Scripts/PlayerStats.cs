@@ -9,9 +9,12 @@ public class PlayerStats : MonoBehaviour
     static int res;
     static int dex;
 
-    void Awake()
+    void Start()
     {
-        score = 1000;
+        score = 0;
+        force = 0;
+        res = 0;
+        dex = 0;
     }
 
     /// <summary>
@@ -24,12 +27,12 @@ public class PlayerStats : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets the score.
+    /// Adjusts the score.
     /// </summary>
-    /// <param name="_score">New Score.</param>
-    public void SetScore(int _score)
+    /// <param name="amount">Amount.</param>
+    public void AdjustScore(int amount)
     {
-        score = _score;
+        score += amount;
     }
 
     /// <summary>
@@ -42,12 +45,12 @@ public class PlayerStats : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets the force stat.
+    /// Adjusts the force stat.
     /// </summary>
-    /// <param name="_force">New Force.</param>
-    public void SetForceStat(int _force)
+    /// <param name="amount">Amount.</param>
+    public void AdjustForceStat(int amount)
     {
-        force = _force;
+        force += amount;
     }
 
     /// <summary>
@@ -60,12 +63,12 @@ public class PlayerStats : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets the resistance stat.
+    /// Adjusts the resistance stat.
     /// </summary>
-    /// <param name="_res">New Res.</param>
-    public void SetResistanceStat(int _res)
+    /// <param name="amount">Amount.</param>
+    public void AdjustResistanceStat(int amount)
     {
-        res = _res;
+        res += amount;
     }
 
     /// <summary>
@@ -78,11 +81,11 @@ public class PlayerStats : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets the dexterity stat.
+    /// Adjusts the dexterity stat.
     /// </summary>
-    /// <param name="_dex">New Dex.</param>
-    public void SetDexterityStat(int _dex)
+    /// <param name="amount">Amount.</param>
+    public void AdjustDexterityStat(int amount)
     {
-        dex = _dex;
+        dex += amount;
     }
 }
