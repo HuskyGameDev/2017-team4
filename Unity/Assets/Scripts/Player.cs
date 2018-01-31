@@ -5,11 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public ActionSwapper actionSwapper;
+    private Animator anim;
 
     // Use this for initialization
     void Start()
     {
-		
+        anim = GetComponent<Animator>();
     }
 	
     // Update is called once per frame
@@ -28,15 +29,18 @@ public class Player : MonoBehaviour
         {
             case 1:
                 // attack
-                Debug.Log("Player attacks...");
+                //Debug.Log("Player attacks...");
+                anim.Play("PlayerAttack");
                 break;
             case 2:
                 // evade
-                Debug.Log("Player evades...");
+                //Debug.Log("Player evades...");
+                anim.Play("PlayerEvade");
                 break;
             default:
                 // defend
-                Debug.Log("Player defends...");
+                //Debug.Log("Player defends...");
+                anim.Play("PlayerDefend");
                 break;
         }
     }
