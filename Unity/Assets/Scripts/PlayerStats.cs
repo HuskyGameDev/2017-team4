@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     static int score;
+    static int maxHealth;
     static int force;
     static int res;
     static int dex;
@@ -12,9 +13,10 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         score = 0;
-        force = 0;
-        res = 0;
-        dex = 0;
+        maxHealth = 999;
+        force = 1;
+        res = 1;
+        dex = 1;
     }
 
     /// <summary>
@@ -33,6 +35,16 @@ public class PlayerStats : MonoBehaviour
     public void AdjustScore(int amount)
     {
         score += amount;
+    }
+
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public void AdjustMaxHealthStat(int amount)
+    {
+        maxHealth += amount;
     }
 
     /// <summary>
