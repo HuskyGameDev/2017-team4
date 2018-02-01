@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public ActionSwapper actionSwapper;
+    public Text playerHealthDisplay;
+    public EnemySpawner enemy;
     private Animator anim;
+    private PlayerStats pStats;
+    private int playerHealth;
 
     // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
+        pStats = GetComponent<PlayerStats>();
+        playerHealth = pStats.GetMaxHealth();
+        playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
     }
 	
     // Update is called once per frame
@@ -31,6 +39,7 @@ public class Player : MonoBehaviour
                 // attack
                 //Debug.Log("Player attacks...");
                 anim.Play("PlayerAttack");
+                enemy.DamageEnemy(pStats.GetForceStat());
                 break;
             case 2:
                 // evade
@@ -43,5 +52,21 @@ public class Player : MonoBehaviour
                 anim.Play("PlayerDefend");
                 break;
         }
+    }
+
+    /// <summary>
+    /// Damages the player.
+    /// </summary>
+    /// <param name="enemyForce">Enemy force.</param>
+    /// <param name="enemyAccuracy">Enemy accuracy.</param>
+    public void DamagePlayer(int enemyForce, int enemyAccuracy = 100)
+    {
+        playerHealth -= enemyForce * Random.Range(1, 15);
+        // TESTING ONLY
+        if (playerHealth < 0)
+            playerHealth = pStats.GetMaxHealth();
+        // MAKE AN END GAME SENARIO HERE PLEASE
+        // K THX
+        playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
     }
 }

@@ -56,7 +56,7 @@ public class Hitzones : MonoBehaviour
                 scoreDisplay.IncreaseScore(10);
                 actionSuccess.AdjustSuccessRate(-1);
             }
-            if (acc > 0.40F && acc <= 0.75F)
+            if (acc > 0.4F && acc <= 0.75F)
             {
                 anim.Play("okay");
                 scoreDisplay.IncreaseScore(25);
