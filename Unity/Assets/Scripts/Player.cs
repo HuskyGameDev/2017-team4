@@ -9,14 +9,14 @@ public class Player : MonoBehaviour
     public Text playerHealthDisplay;
     public EnemySpawner enemy;
     private Animator anim;
-    private PlayerStats pStats;
+    public PlayerStats pStats;
     private int playerHealth;
 
     // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
-        pStats = GetComponent<PlayerStats>();
+        //pStats = GetComponent<PlayerStats>();
         playerHealth = pStats.GetMaxHealth();
         playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
     }

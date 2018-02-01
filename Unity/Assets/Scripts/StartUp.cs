@@ -8,13 +8,14 @@ public class StartUp : MonoBehaviour
     public LevelInfo Info;
     public Note[] Notes;
 
-	private int noteCount;
-	private float noteSpeed;
+    private int noteCount;
+    private float noteSpeed;
 
     // Use this for initialization
     void Start()
     {
-        Info.SetSongIndex(2); // use this line for testing
+        if (Info.GetSongIndex() == 0) // use this line for testing
+            Info.SetSongIndex(2);
         var song = Instantiate(Titles[Info.GetSongIndex()]);
         song.PlayDelayed(2.1F);
 

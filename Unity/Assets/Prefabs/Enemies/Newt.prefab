@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   force: 5
-  resistance: 0
+  resistance: 1
   dexterity: 3
 --- !u!212 &212975189632258130
 SpriteRenderer:
