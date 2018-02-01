@@ -12,6 +12,6 @@ public class NoteCollector : MonoBehaviour
         if (other.tag == "Note")
             Destroy(other.gameObject);
         hitzoneAnim.Play("miss");
-        actionSuccess.AdjustSuccessRate(-2);
+        actionSuccess.AdjustSuccessRate(-5);
     }
 }
