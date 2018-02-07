@@ -15,6 +15,7 @@ public class LevelInfo : MonoBehaviour
     //  2  = It's A Trap
     static int titleIndex;
 
+
     /// <summary>
     /// Gets the difficulty.
     /// </summary>
@@ -72,4 +73,26 @@ public class LevelInfo : MonoBehaviour
                 return 0;
         }
     }
+
+	/// <summary>
+	/// Gets the number of notes for the current index.
+	/// </summary>
+	/// <returns>The number of notes in the song.</returns>
+	public int GetNoteCount()
+	{
+		switch (titleIndex)
+		{
+		case 1:
+			// Theme of DD
+			return 321;
+		case 2:
+			// Silky
+			return 129;
+		case 3:
+			// Trap
+			return 359;
+		default:
+			return 0;
+		}
+	}
 }

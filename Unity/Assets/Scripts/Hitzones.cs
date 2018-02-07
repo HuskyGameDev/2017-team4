@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hitzones : MonoBehaviour
 {
     private Queue<Note> noteQueue;
+    private Animator anim;
     public ScoreDisplay scoreDisplay;
     public ActionSuccess actionSuccess;
 
@@ -12,6 +13,7 @@ public class Hitzones : MonoBehaviour
     void Start()
     {
         noteQueue = new Queue<Note>();
+        anim = GetComponent<Animator>();
     }
 	
     // Update is called once per frame
@@ -48,34 +50,35 @@ public class Hitzones : MonoBehaviour
         {
             var acc = (1.28F - Mathf.Abs(note.gameObject.transform.position.y - (-0.67F))) / 1.28;
 
-            if (acc <= 0.25F)
+            if (acc <= 0.4F)
             {
-                //Debug.Log("BAD");
+                anim.Play("bad");
                 scoreDisplay.IncreaseScore(10);
                 actionSuccess.AdjustSuccessRate(-1);
             }
-            if (acc > 0.25F && acc <= 0.5F)
+            if (acc > 0.4F && acc <= 0.75F)
             {
-                //Debug.Log("OKAY");
+                anim.Play("okay");
                 scoreDisplay.IncreaseScore(25);
                 actionSuccess.AdjustSuccessRate(0);
             }
-            if (acc > 0.5F && acc <= 0.8F)
+            if (acc > 0.75F && acc <= 0.9F)
             {
-                //Debug.Log("GOOD");
+                anim.Play("good");
                 scoreDisplay.IncreaseScore(50);
                 actionSuccess.AdjustSuccessRate(1);
             }
-            if (acc > 0.8F)
+            if (acc > 0.9F)
             {
-                //Debug.Log("PERFECT");
+                anim.Play("perfect");
                 scoreDisplay.IncreaseScore(100);
                 actionSuccess.AdjustSuccessRate(2);
             }
         }
         else
         {
-            actionSuccess.AdjustSuccessRate(-2);
+            anim.Play("miss");
+            actionSuccess.AdjustSuccessRate(-5);
             // break combo
         }
         Destroy(note.gameObject);
