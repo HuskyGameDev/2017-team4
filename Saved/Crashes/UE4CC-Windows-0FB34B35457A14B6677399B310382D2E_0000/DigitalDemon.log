@@ -1,0 +1,637 @@
+﻿Log file open, 12/01/17 14:14:10
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VSPerf140.dll' (GetLastError=126)
+LogWindows: File 'VSPerf140.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogInit: Display: Running engine for game: DigitalDemon
+LogPlatformFile: Not using cached read wrapper
+LogInit: Display: RandInit(-631029717) SRandInit(-631029717).
+LogTaskGraph: Started task graph with 5 named threads and 8 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.124225
+LogD3D11RHI: Aftermath initialized
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin HTML5Networking
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin ImmediatePhysics
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogInit: Using libcurl 7.47.1
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.0.2g
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = false  - Libcurl will NOT verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit: Build: ++UE4+Release-4.17-CL-3658906
+LogInit: Engine Version: 4.17.2-3658906+++UE4+Release-4.17
+LogInit: Compatible Engine Version: 4.17.0-3573198+++UE4+Release-4.17
+LogInit: Net CL: 3573198
+LogDevObjectVersion: Number of dev versions registered: 16
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 20
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 28
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 0
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 19
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 4
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 0
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 1
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 7
+LogInit: Compiled (64-bit): Sep 22 2017 13:47:16
+LogInit: Compiled with Visual C++: 19.00.24215.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.17
+LogInit: Command line: -EpicPortal 
+LogInit: Base directory: C:/Users/jktig/Documents/unreal4/UE_4.17/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2017.12.01-19.14.12:074][  0]LogInit: Selected Device Profile: [Windows]
+[2017.12.01-19.14.12:074][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2017.12.01-19.14.12:156][  0]LogInit: Computer: DESKTOP-D95B7RI
+[2017.12.01-19.14.12:156][  0]LogInit: User: jktig
+[2017.12.01-19.14.12:156][  0]LogInit: CPU Page size=4096, Cores=2
+[2017.12.01-19.14.12:156][  0]LogInit: High frequency timer resolution =2.648437 MHz
+[2017.12.01-19.14.12:156][  0]LogMemory: Memory total: Physical=11.9GB (12GB approx)
+[2017.12.01-19.14.12:156][  0]LogMemory: Platform Memory Stats for Windows
+[2017.12.01-19.14.12:156][  0]LogMemory: Process Physical Memory: 278.33 MB used, 278.33 MB peak
+[2017.12.01-19.14.12:156][  0]LogMemory: Process Virtual Memory: 275.75 MB used, 275.75 MB peak
+[2017.12.01-19.14.12:156][  0]LogMemory: Physical Memory: 4829.73 MB used,  7341.45 MB free, 12171.18 MB total
+[2017.12.01-19.14.12:156][  0]LogMemory: Virtual Memory: 657.36 MB used,  7341.45 MB free, 134217728.00 MB total
+[2017.12.01-19.14.12:368][  0]LogInit: Using OS detected language (en-US).
+[2017.12.01-19.14.12:368][  0]LogInit: Using OS detected locale (en-US).
+[2017.12.01-19.14.12:372][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2017.12.01-19.14.13:276][  0]LogD3D11RHI: D3D11 adapters:
+[2017.12.01-19.14.13:282][  0]LogD3D11RHI:    0. 'Intel(R) HD Graphics 620' (Feature Level 11_0)
+[2017.12.01-19.14.13:282][  0]LogD3D11RHI:       128/0/6085 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x8086
+[2017.12.01-19.14.13:284][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2017.12.01-19.14.13:284][  0]LogD3D11RHI:       0/0/6085 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2017.12.01-19.14.13:284][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2017.12.01-19.14.13:290][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2017.12.01-19.14.13:290][  0]LogD3D11RHI:     GPU DeviceId: 0x5916 (for the marketing name, search the web for "GPU Device Id")
+[2017.12.01-19.14.13:290][  0]LogWindows: EnumDisplayDevices:
+[2017.12.01-19.14.13:290][  0]LogWindows:    0. 'Intel(R) HD Graphics 620' (P:1 D:1)
+[2017.12.01-19.14.13:290][  0]LogWindows:    1. 'Intel(R) HD Graphics 620' (P:0 D:0)
+[2017.12.01-19.14.13:291][  0]LogWindows:    2. 'Intel(R) HD Graphics 620' (P:0 D:0)
+[2017.12.01-19.14.13:291][  0]LogWindows: DebugString: FoundDriverCount:3 
+[2017.12.01-19.14.13:291][  0]LogD3D11RHI:     Adapter Name: Intel(R) HD Graphics 620
+[2017.12.01-19.14.13:291][  0]LogD3D11RHI:   Driver Version: 21.20.16.4550 (internal:21.20.16.4550, unified:21.20.16.4550)
+[2017.12.01-19.14.13:291][  0]LogD3D11RHI:      Driver Date: 11-11-2016
+[2017.12.01-19.14.13:291][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2017.12.01-19.14.13:296][  0]LogD3D11RHI: Async texture creation enabled
+[2017.12.01-19.14.13:301][  0]LogD3D11RHI: GPU Timing Frequency: 12.000000 (Debug: 2 0)
+[2017.12.01-19.14.13:302][  0]LogShaderCompilers: Guid format shader working directory is 21 characters bigger than the processId version (../../../../../2017-team4/Intermediate/Shaders/WorkingDirectory/5984/).
+[2017.12.01-19.14.13:302][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/jktig/AppData/Local/Temp/UnrealShaderWorkingDir/6C3C43144413C7394C797E8D0C6C0B29/'.
+[2017.12.01-19.14.13:302][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2017.12.01-19.14.14:425][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2017.12.01-19.14.14:494][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2017.12.01-19.14.14:555][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2017.12.01-19.14.14:619][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2017.12.01-19.14.14:681][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2017.12.01-19.14.14:742][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2017.12.01-19.14.14:807][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2017.12.01-19.14.14:869][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2017.12.01-19.14.14:926][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2017.12.01-19.14.14:985][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2017.12.01-19.14.15:056][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
+[2017.12.01-19.14.15:115][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
+[2017.12.01-19.14.15:175][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
+[2017.12.01-19.14.15:241][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
+[2017.12.01-19.14.15:319][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
+[2017.12.01-19.14.15:448][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
+[2017.12.01-19.14.15:448][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
+[2017.12.01-19.14.15:496][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2017.12.01-19.14.15:604][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2017.12.01-19.14.15:636][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2017.12.01-19.14.15:695][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2017.12.01-19.14.15:755][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2017.12.01-19.14.15:814][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2017.12.01-19.14.15:874][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2017.12.01-19.14.15:874][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2017.12.01-19.14.16:469][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2017.12.01-19.14.16:576][  0]LogDerivedDataCache: Loaded boot cache 0.11s 93MB C:/Users/jktig/AppData/Local/UnrealEngine/4.17/DerivedDataCache/Boot.ddc.
+[2017.12.01-19.14.16:576][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/jktig/AppData/Local/UnrealEngine/4.17/DerivedDataCache/Boot.ddc
+[2017.12.01-19.14.16:576][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../2017-team4/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2017.12.01-19.14.16:576][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2017.12.01-19.14.16:576][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../2017-team4/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2017.12.01-19.14.16:576][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2017.12.01-19.14.16:593][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2017.12.01-19.14.16:606][  0]LogDerivedDataCache: Using Local data cache path C:/Users/jktig/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2017.12.01-19.14.16:618][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2017.12.01-19.14.16:618][  0]LogSlate: Using Freetype 2.6.0
+[2017.12.01-19.14.16:619][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2017.12.01-19.14.16:619][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2017.12.01-19.14.16:914][  0]LogAssetRegistry: FAssetRegistry took 0.0259 seconds to start up
+[2017.12.01-19.14.17:051][  0]LogInit: Selected Device Profile: [Windows]
+[2017.12.01-19.14.17:666][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2017.12.01-19.14.17:750][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2017.12.01-19.14.17:750][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2017.12.01-19.14.17:750][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2017.12.01-19.14.17:750][  0]LogMeshReduction: No automatic mesh merging module available
+[2017.12.01-19.14.17:750][  0]LogMeshMerging: No automatic mesh merging module available
+[2017.12.01-19.14.17:752][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2017.12.01-19.14.18:506][  0]LogNetVersion: DigitalDemon , NetCL: 3573198, EngineNetVer: 2, GameNetVer: 0 (Checksum: 2581881815)
+[2017.12.01-19.14.18:822][  0]LogPackageLocalizationCache: Processed 5 localized package path(s) for 2 prioritized culture(s) in 0.104317 seconds
+[2017.12.01-19.14.18:828][  0]LogUObjectArray: 35825 objects as part of root set at end of initial load.
+[2017.12.01-19.14.18:829][  0]LogUObjectAllocator: 7529104 out of 0 bytes used by permanent object pool.
+[2017.12.01-19.14.18:829][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2017.12.01-19.14.18:919][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2017.12.01-19.14.22:101][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2017.12.01-19.14.22:149][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2017.12.01-19.14.23:581][  0]LogMaterial: Uniform references updated for custom material expression Custom.
+[2017.12.01-19.14.24:086][  0]SourceControl: Source control is disabled
+[2017.12.01-19.14.24:086][  0]SourceControl: Source control is disabled
+[2017.12.01-19.14.24:151][  0]SourceControl: Source control is disabled
+[2017.12.01-19.14.24:213][  0]SourceControl: Source control is disabled
+[2017.12.01-19.14.24:990][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2017.12.01-19.14.25:303][  0]LogOcInput: OculusInput pre-init called
+[2017.12.01-19.14.25:639][  0]LogEngine: Initializing Engine...
+[2017.12.01-19.14.25:641][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2017.12.01-19.14.25:907][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2017.12.01-19.14.25:907][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2017.12.01-19.14.26:068][  0]LogAIModule: Creating AISystem for world Untitled
+[2017.12.01-19.14.26:079][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.14.26:172][  0]LogInit: FAudioDevice initialized.
+[2017.12.01-19.14.43:602][  0]LogDerivedDataCache: Saved boot cache 17.43s 93MB C:/Users/jktig/AppData/Local/UnrealEngine/4.17/DerivedDataCache/Boot.ddc.
+[2017.12.01-19.14.43:632][  0]LogInit: Texture streaming: Enabled
+[2017.12.01-19.14.43:759][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2017.12.01-19.14.44:090][  0]LogInit: Transaction tracking system initialized
+[2017.12.01-19.14.44:500][  0]BlueprintLog: New page: Editor Load
+[2017.12.01-19.14.45:639][  0]LocalizationService: Localization service is disabled
+[2017.12.01-19.14.46:542][  0]LogConsoleResponse: Display: 
+[2017.12.01-19.14.46:841][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2017.12.01-19.14.46:841][  0]LogCook: Display: Mobile HDR setting 1
+[2017.12.01-19.14.46:841][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2017.12.01-19.14.47:595][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jktig/Documents/2017-team4/Content/' took 0.15s
+[2017.12.01-19.14.48:393][  0]SourceControl: Source control is disabled
+[2017.12.01-19.14.48:393][  0]Cmd: MAP LOAD FILE="../../../../../2017-team4/Content/2DSideScrollerBP/Maps/2DSideScrollerExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2017.12.01-19.14.48:436][  0]LightingResults: New page: Lighting Build
+[2017.12.01-19.14.48:490][  0]MapCheck: New page: Map Check
+[2017.12.01-19.14.48:490][  0]LightingResults: New page: Lighting Build
+[2017.12.01-19.14.49:672][  0]LogBlueprint: Warning: [Compiler 2DSideScrollerCharacter] InputAction Event references unknown Action 'Jump' for  InputAction Jump
+[2017.12.01-19.14.49:673][  0]LogBlueprint: Warning: [Compiler 2DSideScrollerCharacter] Input Axis Event references unknown Axis 'MoveRight' for  InputAxis MoveRight
+[2017.12.01-19.14.49:693][  0]LogBlueprint: Warning: [Compiler 2DSideScrollerCharacter] [0041.78] Compile of 2DSideScrollerCharacter successful, but with 2 Warning(s) [in 86 ms] (/Game/2DSideScrollerBP/Blueprints/2DSideScrollerCharacter.2DSideScrollerCharacter)
+[2017.12.01-19.14.52:773][  0]LogAIModule: Creating AISystem for world 2DSideScrollerExampleMap
+[2017.12.01-19.14.52:898][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2017.12.01-19.14.52:948][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2017.12.01-19.14.53:045][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 96.377ms to complete.
+[2017.12.01-19.14.53:045][  0]LogFileHelpers: Loading map '2DSideScrollerExampleMap' took 4.652
+[2017.12.01-19.14.53:105][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2017.12.01-19.14.53:105][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2017.12.01-19.14.54:033][  0]LogCollectionManager: Loaded 0 collections in 0.002316 seconds
+[2017.12.01-19.14.55:133][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jktig/Documents/2017-team4/Saved/Collections/' took 0.01s
+[2017.12.01-19.14.55:133][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jktig/Documents/2017-team4/Content/Developers/jktig/Collections/' took 0.01s
+[2017.12.01-19.14.55:133][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jktig/Documents/2017-team4/Content/Collections/' took 0.01s
+[2017.12.01-19.14.55:133][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
+[2017.12.01-19.14.55:163][  0]LogContentBrowser: Native class hierarchy populated in 0.0268 seconds. Added 2386 classes and 500 folders.
+[2017.12.01-19.14.55:771][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0419 seconds. Added 0 classes and 0 folders.
+[2017.12.01-19.14.59:166][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0035 seconds. Added 0 classes and 0 folders.
+[2017.12.01-19.14.59:444][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0011 seconds. Added 1 classes and 2 folders.
+[2017.12.01-19.15.00:325][  0]LogSlate: Took 0.000282 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2017.12.01-19.15.00:357][  0]LogSlate: Took 0.001537 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2017.12.01-19.15.00:502][  0]LogSlate: Took 0.047273 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2017.12.01-19.15.01:523][  0]LogRenderer: Reallocating scene render targets to support 964x436 Format 10 NumSamples 1 (Frame:1).
+[2017.12.01-19.15.02:697][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0010 seconds. Added 1 classes and 2 folders.
+[2017.12.01-19.15.02:698][  0]LogLoad: (Engine Initialization) Total time: 54.78 seconds
+[2017.12.01-19.15.02:698][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2017.12.01-19.15.02:698][  0]LogExternalProfiler: No external profilers were discovered.  External profiling features will not be available.
+[2017.12.01-19.15.02:725][  0]LogEditorViewport: Clicking on Actor (LMB): PaperSpriteActor (LeftEdge)
+[2017.12.01-19.15.03:794][  0]LogEditorViewport: Clicking on Actor (LMB): PaperSpriteActor (LeftEdge)
+[2017.12.01-19.15.03:861][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2017.12.01-19.15.04:156][  0]LogSlate: Took 0.039971 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2017.12.01-19.15.04:864][  1]LogAssetRegistry: Asset discovery search completed in 47.9716 seconds
+[2017.12.01-19.15.04:867][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
+[2017.12.01-19.15.04:867][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000091 seconds (updated 0 objects)
+[2017.12.01-19.15.05:491][  2]LogSlate: Took 0.000355 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2017.12.01-19.16.15:802][549]LogSlate: Took 0.000327 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2017.12.01-19.16.16:190][549]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.16.16:235][549]Cmd: MAP LOAD FILE="../../../../../2017-team4/Content/levels/mainMenu.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2017.12.01-19.16.16:235][549]LightingResults: New page: Lighting Build
+[2017.12.01-19.16.16:236][549]LoadErrors: New page: Loading map: mainMenu.umap
+[2017.12.01-19.16.16:255][549]MapCheck: New page: Map Check
+[2017.12.01-19.16.16:255][549]LightingResults: New page: Lighting Build
+[2017.12.01-19.16.16:276][549]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2017.12.01-19.16.16:305][549]Cmd: MAP CHECKDEP NOCLEARLOG
+[2017.12.01-19.16.16:406][549]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 101.114ms to complete.
+[2017.12.01-19.16.16:408][549]LogFileHelpers: Loading map 'mainMenu' took 0.174
+[2017.12.01-19.16.18:024][629]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.16.18:174][629]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.16.18:174][629]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.16.18:183][629]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:16:18 AM)
+[2017.12.01-19.16.18:183][629]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.16.18:210][629]LogPlayLevel: PIE: StaticDuplicateObject took: (0.027539s)
+[2017.12.01-19.16.18:211][629]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.16.18:211][629]LogPlayLevel: PIE: World Init took: (0.001013s)
+[2017.12.01-19.16.18:212][629]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.028896s)
+[2017.12.01-19.16.18:228][629]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.16.18:263][629]LogInit: FAudioDevice initialized.
+[2017.12.01-19.16.18:355][629]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.16.18:357][629]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 0) at 2017.12.01-14.16.18
+[2017.12.01-19.16.18:380][629]LogWorld: Bringing up level for play took: 0.023320
+[2017.12.01-19.16.18:477][629]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0011 seconds. Added 11 classes and 0 folders.
+[2017.12.01-19.16.18:532][629]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu -0.543
+[2017.12.01-19.16.18:532][629]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.16.28:138][249]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.16.28:201][249]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.16.53:723][469]LogSlate: Took 0.000186 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2017.12.01-19.16.53:981][469]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0014 seconds. Added 113 classes and 0 folders.
+[2017.12.01-19.16.55:436][469]LogSlate: Took 0.015353 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2017.12.01-19.17.03:875][712]LogSlate: Took 0.015324 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2017.12.01-19.17.59:653][ 22]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.17.59:683][ 22]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.17.59:683][ 22]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.17.59:683][ 22]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:17:59 AM)
+[2017.12.01-19.17.59:683][ 22]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.17.59:685][ 22]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001940s)
+[2017.12.01-19.17.59:686][ 22]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.17.59:687][ 22]LogPlayLevel: PIE: World Init took: (0.001071s)
+[2017.12.01-19.17.59:687][ 22]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.003269s)
+[2017.12.01-19.17.59:717][ 22]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.17.59:752][ 22]LogInit: FAudioDevice initialized.
+[2017.12.01-19.17.59:800][ 22]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.17.59:804][ 22]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.17.59
+[2017.12.01-19.17.59:805][ 22]LogWorld: Bringing up level for play took: 0.002762
+[2017.12.01-19.17.59:818][ 22]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu 0.743
+[2017.12.01-19.17.59:819][ 22]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.18.18:051][103]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.18:051][103]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.18:451][127]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.18:451][127]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.18:767][146]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.18:768][146]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.19:068][164]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.19:068][164]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.19:251][175]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.19:251][175]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.19:803][208]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.19:803][208]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.19:969][218]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.19:969][218]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.20:140][228]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.20:140][228]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.20:310][238]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.20:310][238]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.20:460][247]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.20:460][247]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.20:843][270]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.21:026][281]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.21:209][292]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.21:393][303]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.22:131][347]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.18.25:137][523]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.18.25:174][523]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.20.22:423][611]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.20.23:030][611]LogSavePackage: Save=247.19ms
+[2017.12.01-19.20.23:030][611]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_StoreC911A2C04B10540A2157CCBA30B74EE7.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.20.23:035][611]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.22.32:268][633]LogSlate: Took 0.185593 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/Roboto-BoldCondensedItalic.ttf' (160K)
+[2017.12.01-19.26.06:658][832]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.26.07:552][858]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.26.07:783][858]LogSavePackage: Save=199.59ms
+[2017.12.01-19.26.07:783][858]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_StoreBF12D4A94764EE4A0C463EBA4E7AC0D6.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.26.07:789][858]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.26.10:589][975]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.26.10:635][975]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.26.10:635][975]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.26.10:636][975]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:26:10 AM)
+[2017.12.01-19.26.10:636][975]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.26.10:638][975]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002605s)
+[2017.12.01-19.26.10:639][975]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.26.10:639][975]LogPlayLevel: PIE: World Init took: (0.001049s)
+[2017.12.01-19.26.10:640][975]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.003977s)
+[2017.12.01-19.26.10:665][975]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.26.10:699][975]LogInit: FAudioDevice initialized.
+[2017.12.01-19.26.10:746][975]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.26.10:749][975]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.26.10
+[2017.12.01-19.26.10:750][975]LogWorld: Bringing up level for play took: 0.002528
+[2017.12.01-19.26.10:760][975]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu -0.315
+[2017.12.01-19.26.10:761][975]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.26.22:484][668]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.26.22:525][668]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.27.01:646][846]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.27.02:249][862]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.27.02:431][862]LogSavePackage: Save=162.31ms
+[2017.12.01-19.27.02:431][862]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_Store36276FF94923D6A056154E9AAD705BB4.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.27.02:436][862]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.27.04:614][954]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.27.04:633][954]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.27.04:633][954]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.27.04:633][954]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:27:04 AM)
+[2017.12.01-19.27.04:633][954]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.27.04:635][954]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001550s)
+[2017.12.01-19.27.04:635][954]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.27.04:636][954]LogPlayLevel: PIE: World Init took: (0.000820s)
+[2017.12.01-19.27.04:636][954]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.002585s)
+[2017.12.01-19.27.04:657][954]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.27.04:686][954]LogInit: FAudioDevice initialized.
+[2017.12.01-19.27.04:721][954]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.27.04:722][954]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.27.04
+[2017.12.01-19.27.04:722][954]LogWorld: Bringing up level for play took: 0.000773
+[2017.12.01-19.27.04:725][954]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu -0.351
+[2017.12.01-19.27.04:725][954]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.27.18:199][751]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.27.18:199][751]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.27.18:732][783]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.27.18:732][783]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.27.21:838][968]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.27.21:838][968]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.27.22:426][  2]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.27.22:426][  2]LogStreaming: Warning: Failed to read file '../../../../../2017-team4/Saved/SaveGames/DigitalDemonSave.sav' error.
+[2017.12.01-19.27.28:452][359]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.27.28:490][359]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.28.44:271][685]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.28.45:622][728]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.28.45:826][728]LogSavePackage: Save=180.99ms
+[2017.12.01-19.28.45:827][728]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_Store284D31FD4F8BB830FED2BCB95366F907.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.28.45:831][728]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.28.48:431][840]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.28.48:457][840]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.28.48:457][840]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.28.48:457][840]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:28:48 AM)
+[2017.12.01-19.28.48:457][840]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.28.48:460][840]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002432s)
+[2017.12.01-19.28.48:461][840]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.28.48:461][840]LogPlayLevel: PIE: World Init took: (0.001339s)
+[2017.12.01-19.28.48:462][840]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.004130s)
+[2017.12.01-19.28.48:494][840]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.28.48:532][840]LogInit: FAudioDevice initialized.
+[2017.12.01-19.28.48:577][840]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.28.48:581][840]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.28.48
+[2017.12.01-19.28.48:582][840]LogWorld: Bringing up level for play took: 0.002886
+[2017.12.01-19.28.48:589][840]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu -0.486
+[2017.12.01-19.28.48:590][840]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.29.04:827][790]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.29.04:867][790]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.31.13:584][146]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.31.15:265][202]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.31.15:498][202]LogSavePackage: Save=199.25ms
+[2017.12.01-19.31.15:498][202]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_StoreAC09772149AA10F37714F3BCC1F26646.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.31.15:504][202]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.31.17:397][281]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.31.17:423][281]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.31.17:423][281]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.31.17:423][281]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:31:17 AM)
+[2017.12.01-19.31.17:423][281]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.31.17:425][281]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002009s)
+[2017.12.01-19.31.17:426][281]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.31.17:426][281]LogPlayLevel: PIE: World Init took: (0.001030s)
+[2017.12.01-19.31.17:427][281]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.003353s)
+[2017.12.01-19.31.17:456][281]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.31.17:710][281]LogInit: FAudioDevice initialized.
+[2017.12.01-19.31.17:746][281]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.31.17:748][281]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.31.17
+[2017.12.01-19.31.17:748][281]LogWorld: Bringing up level for play took: 0.001057
+[2017.12.01-19.31.17:752][281]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu 0.677
+[2017.12.01-19.31.17:752][281]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.31.34:698][281]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.31.34:735][281]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.32.04:049][125]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.32.04:962][154]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.32.05:189][154]LogSavePackage: Save=201.34ms
+[2017.12.01-19.32.05:189][154]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_Store2ED66D0A4D00F3C41DDBE5BB07C525E1.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.32.05:194][154]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.32.07:334][251]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.32.07:352][251]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.32.07:352][251]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.32.07:352][251]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:32:07 AM)
+[2017.12.01-19.32.07:352][251]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.32.07:354][251]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001599s)
+[2017.12.01-19.32.07:354][251]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.32.07:354][251]LogPlayLevel: PIE: World Init took: (0.000739s)
+[2017.12.01-19.32.07:355][251]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.002552s)
+[2017.12.01-19.32.07:375][251]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.32.07:404][251]LogInit: FAudioDevice initialized.
+[2017.12.01-19.32.07:436][251]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.32.07:437][251]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.32.07
+[2017.12.01-19.32.07:437][251]LogWorld: Bringing up level for play took: 0.000732
+[2017.12.01-19.32.07:439][251]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu 0.364
+[2017.12.01-19.32.07:440][251]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.32.21:175][ 69]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.32.21:209][ 69]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.32.40:244][370]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.32.40:891][389]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.32.41:105][389]LogSavePackage: Save=192.86ms
+[2017.12.01-19.32.41:105][389]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_Store7552F4B84D642A89C9DE9DB0BBDE730C.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.32.41:109][389]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.32.47:497][573]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.32.47:514][573]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.32.47:514][573]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.32.47:514][573]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:32:47 AM)
+[2017.12.01-19.32.47:514][573]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.32.47:516][573]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001578s)
+[2017.12.01-19.32.47:516][573]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.32.47:516][573]LogPlayLevel: PIE: World Init took: (0.000746s)
+[2017.12.01-19.32.47:517][573]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.002581s)
+[2017.12.01-19.32.47:541][573]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.32.47:570][573]LogInit: FAudioDevice initialized.
+[2017.12.01-19.32.47:604][573]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.32.47:605][573]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.32.47
+[2017.12.01-19.32.47:605][573]LogWorld: Bringing up level for play took: 0.000708
+[2017.12.01-19.32.47:607][573]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu 0.532
+[2017.12.01-19.32.47:608][573]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.32.57:926][186]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.32.57:959][186]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.33.37:225][687]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.33.37:922][706]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.33.38:124][706]LogSavePackage: Save=174.43ms
+[2017.12.01-19.33.38:124][706]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_Store9B31A46542904479C6B532A676F9BC52.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.33.38:129][706]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.33.38:715][725]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/levels/mainMenu' took 0.028
+[2017.12.01-19.33.38:732][725]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Hud/Hud_Mainmenu] ([1] browsable assets)...
+[2017.12.01-19.33.38:732][725]OBJ SavePackage: Finished generating thumbnails for package [/Game/Hud/Hud_Mainmenu]
+[2017.12.01-19.33.38:732][725]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Mainmenu" FILE="../../../../../2017-team4/Saved/Autosaves/Game/Hud/Hud_Mainmenu_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2017.12.01-19.33.38:896][725]LogSavePackage: Save=141.74ms
+[2017.12.01-19.33.38:896][725]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_Mainmenu_Auto1D0DDFE034F41401CF6D365A94ED7184E.tmp' to '../../../../../2017-team4/Saved/Autosaves/Game/Hud/Hud_Mainmenu_Auto1.uasset'
+[2017.12.01-19.33.38:929][725]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Saved/Autosaves/Game/Hud/Hud_Mainmenu_Auto1.uasset
+[2017.12.01-19.33.38:929][725]LogFileHelpers: Auto-saving content packages took 0.214
+[2017.12.01-19.33.42:101][820]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.33.42:119][820]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.33.42:120][820]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.33.42:120][820]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:33:42 AM)
+[2017.12.01-19.33.42:120][820]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.33.42:122][820]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001775s)
+[2017.12.01-19.33.42:122][820]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.33.42:123][820]LogPlayLevel: PIE: World Init took: (0.000890s)
+[2017.12.01-19.33.42:123][820]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.002929s)
+[2017.12.01-19.33.42:146][820]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.33.42:175][820]LogInit: FAudioDevice initialized.
+[2017.12.01-19.33.42:224][820]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.33.42:229][820]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.33.42
+[2017.12.01-19.33.42:230][820]LogWorld: Bringing up level for play took: 0.003138
+[2017.12.01-19.33.42:241][820]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu -0.834
+[2017.12.01-19.33.42:243][820]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.34.10:363][484]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.34.10:401][484]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.34.31:672][994]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.34.41:292][349]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.34.41:494][349]LogSavePackage: Save=176.68ms
+[2017.12.01-19.34.41:494][349]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_StoreF78C138540CCF0C2843ECAAB0A68D7D3.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.34.41:500][349]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.34.45:585][499]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.34.45:603][499]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.34.45:603][499]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.34.45:604][499]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:34:45 AM)
+[2017.12.01-19.34.45:604][499]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.34.45:605][499]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001550s)
+[2017.12.01-19.34.45:606][499]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.34.45:606][499]LogPlayLevel: PIE: World Init took: (0.000668s)
+[2017.12.01-19.34.45:606][499]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.002430s)
+[2017.12.01-19.34.45:629][499]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.34.45:658][499]LogInit: FAudioDevice initialized.
+[2017.12.01-19.34.45:691][499]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.34.45:692][499]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.34.45
+[2017.12.01-19.34.45:692][499]LogWorld: Bringing up level for play took: 0.000817
+[2017.12.01-19.34.45:694][499]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu 0.619
+[2017.12.01-19.34.45:695][499]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.34.58:194][239]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.34.58:227][239]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.35.12:634][573]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.35.13:240][588]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.35.13:431][588]LogSavePackage: Save=171.59ms
+[2017.12.01-19.35.13:431][588]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_Store382357D943CF09E3EA210F966AD27030.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.35.13:436][588]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.36.43:755][751]BlueprintLog: New page: Compile Hud_Store
+[2017.12.01-19.36.44:357][768]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Store" FILE="../../../../../2017-team4/Content/Hud/Hud_Store.uasset" SILENT=true
+[2017.12.01-19.36.44:564][768]LogSavePackage: Save=184.83ms
+[2017.12.01-19.36.44:564][768]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_Store3D61C61C49B13A847C764B9B6A6CF68C.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Store.uasset'
+[2017.12.01-19.36.44:569][768]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Store.uasset
+[2017.12.01-19.36.51:347][991]LogTemp: Repeating last play command: Selected Viewport
+[2017.12.01-19.36.51:365][991]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.36.51:365][991]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.12.01-19.36.51:365][991]PIE: New page: PIE session: mainMenu (Dec 1, 2017, 9:36:51 AM)
+[2017.12.01-19.36.51:366][991]LogPlayLevel: Creating play world package: /Game/levels/UEDPIE_0_mainMenu
+[2017.12.01-19.36.51:367][991]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001720s)
+[2017.12.01-19.36.51:368][991]LogAIModule: Creating AISystem for world mainMenu
+[2017.12.01-19.36.51:368][991]LogPlayLevel: PIE: World Init took: (0.001035s)
+[2017.12.01-19.36.51:369][991]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/levels/mainMenu.mainMenu to /Game/levels/UEDPIE_0_mainMenu.mainMenu (0.003052s)
+[2017.12.01-19.36.51:393][991]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.12.01-19.36.51:424][991]LogInit: FAudioDevice initialized.
+[2017.12.01-19.36.51:459][991]LogLoad: Game class is '2DSideScrollerGameMode_C'
+[2017.12.01-19.36.51:460][991]LogWorld: Bringing World /Game/levels/UEDPIE_0_mainMenu.mainMenu up for play (max tick rate 60) at 2017.12.01-14.36.51
+[2017.12.01-19.36.51:460][991]LogWorld: Bringing up level for play took: 0.000748
+[2017.12.01-19.36.51:463][991]PIE: Play in editor start time for /Game/levels/UEDPIE_0_mainMenu 0.388
+[2017.12.01-19.36.51:463][991]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.37.06:044][852]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.37.06:080][852]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/levels/mainMenu.mainMenu:PersistentLevel' has LevelScriptBlueprint '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu' with GeneratedClass '/Game/levels/mainMenu.mainMenu_C' with ClassGeneratedBy '/Game/levels/mainMenu.mainMenu:PersistentLevel.mainMenu'
+[2017.12.01-19.37.30:518][773]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hud/Hud_Mainmenu" FILE="../../../../../2017-team4/Content/Hud/Hud_Mainmenu.uasset" SILENT=true
+[2017.12.01-19.37.30:690][773]LogSavePackage: Save=146.91ms
+[2017.12.01-19.37.30:690][773]LogSavePackage: Moving '../../../../../2017-team4/Saved/Hud_Mainmenu56D073FE4F7A1EE50C1D6E95379683FE.tmp' to '../../../../../2017-team4/Content/Hud/Hud_Mainmenu.uasset'
+[2017.12.01-19.37.30:694][773]LogSavePackage: Display: Finished SavePackage ../../../../../2017-team4/Content/Hud/Hud_Mainmenu.uasset
+[2017.12.01-19.37.53:579][610]LogStats: FPlatformStackWalk::StackWalkAndDump -  1.585 s
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: === Handled ensure: ===
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: 
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: Ensure condition failed: !PreviewSlateWidgetWeak.IsValid() [File:D:\Build\++UE4+Release-4.17+Compile\Sync\Engine\Source\Editor\UMGEditor\Private\WidgetBlueprintEditor.cpp] [Line: 786]
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: 
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: Stack: 
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: UE4Editor-Core.dll!0x00000000A5E13E36
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: UE4Editor-Core.dll!0x00000000A5B9C2D2
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: UE4Editor-Core.dll!0x00000000A5BB4746
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x00000000948C0940
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x000000009492A9DE
+[2017.12.01-19.37.53:579][610]LogOutputDevice: Error: UE4Editor-Kismet.dll!0x000000009CA6901C
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-Kismet.dll!0x000000009CA6DD1C
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-Engine.dll!0x0000000097BA1CE7
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UnrealEd.dll!0x00000000A49770EF
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x0000000094968AD2
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x000000009490B024
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x00000000948CED97
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x00000000948D2F17
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-Slate.dll!0x00000000A8AFA227
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-Slate.dll!0x00000000A891725A
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-Slate.dll!0x00000000A8917D7D
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-Slate.dll!0x00000000A88B6E74
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x00000000948887BC
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x0000000094930C12
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x00000000948D04E6
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x000000009487E9A5
+[2017.12.01-19.37.53:580][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x0000000094973CAF
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x00000000949708C9
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-UMGEditor.dll!0x000000009493CED0
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Slate.dll!0x00000000A88A4DA6
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Slate.dll!0x00000000A887665C
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Slate.dll!0x00000000A890F95A
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Slate.dll!0x00000000A88F97E3
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Slate.dll!0x00000000A88EAFE0
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Core.dll!0x00000000A5DEB80B
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Core.dll!0x00000000A5DD3EE1
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Core.dll!0x00000000A5DED5BB
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Core.dll!0x00000000A5DCF042
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: USER32.dll!0x00000000DE65BC50
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: USER32.dll!0x00000000DE65B5CF
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor-Core.dll!0x00000000A5DEDCC6
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor.exe!0x00000000CD914BE2
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor.exe!0x00000000CD923970
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor.exe!0x00000000CD9239EA
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor.exe!0x00000000CD9302D9
+[2017.12.01-19.37.53:581][610]LogOutputDevice: Error: UE4Editor.exe!0x00000000CD931C47
+[2017.12.01-19.37.53:582][610]LogOutputDevice: Error: KERNEL32.DLL!0x00000000DDE52774
+[2017.12.01-19.37.53:582][610]LogOutputDevice: Error: ntdll.dll!0x00000000E07B0D51
+[2017.12.01-19.37.53:582][610]LogOutputDevice: Error: 
+[2017.12.01-19.37.53:591][610]LogStats:                SubmitErrorReport -  0.000 s
