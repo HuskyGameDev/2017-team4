@@ -8,37 +8,48 @@ public class StartUp : MonoBehaviour
 	public LevelInfo Info;
 	public Note[] Notes;
 
-	private int noteCount;
-	private float noteSpeed;
-	private float spawnTime;
-	private AudioSource song;
-	private float beatDelay;
+	private int noteCount;		//Number of notes in song
+	private float noteSpeed;	//Speed of notes falling
+	private float spawnTime;	//Current time between note spawns
+	private AudioSource song;	//Current song being played
+	private float noteDelay;	//Delay between note spawns
 
 	// Use this for initialization
 	void Start ()
 	{
-		if (Info.GetSongIndex () == 0) // use this line for testing
+		//Get index of song
+		if (Info.GetSongIndex () == 0) //use this line for testing
             Info.SetSongIndex (3);
+
+		//Instantiate song from array of AudioSource type
 		song = Instantiate (Titles [Info.GetSongIndex ()]);
-		song.PlayDelayed (2.9F);
 
-		beatDelay = 60.0F / (float)Info.GetSongBpm ();
-		float noteDelay = 0.0F;
+		//Delay song start
+		song.PlayDelayed (2.9F); 
 
-		//noteCount = 129;  //Silky Smooth
-		//noteCount = 359;	//It's a Trap
-		//noteCount = 321;	//Digital Demon
+		//Set delay in seconds between notes
+		noteDelay = 60.0F / (float)Info.GetSongBpm ();
+
+		//Get note count
+			//noteCount = 129;  //Silky Smooth
+			//noteCount = 359;	//It's a Trap
+			//noteCount = 321;	//Digital Demon
 		noteCount = Info.GetNoteCount();
 		noteSpeed = 2.5F;
 
+		//Initialize time
 		spawnTime = 0F;
 	}
 
-	//Call note spawn method according to beatDelay
+	//Call note spawn method according to noteDelay
 	void Update ()
 	{
+		//Increment time between last Update call
 		spawnTime += Time.deltaTime;
-		if (spawnTime >= beatDelay) {
+
+		//Spawn a note and reset time counter when it is greater than
+		//or equal to the specified delay
+		if (spawnTime >= noteDelay) {
 			spawnTime = 0;
 			SpawnNotes ();
 		} else {
@@ -50,10 +61,13 @@ public class StartUp : MonoBehaviour
 	//Spawn notes
 	void SpawnNotes ()
 	{
-		Debug.Log (noteCount);
+		//Spawn random note
 		var note = Instantiate (Notes [Random.Range (0, 4)]);
-		//var note = Instantiate(Notes[0]);
+
+		//Set note speed
 		note.SetSpeed (noteSpeed);
+
+		//Decrement from total note count
 		noteCount--;
 		if (noteCount <= 0)
 			Destroy (this.gameObject);
