@@ -7,7 +7,7 @@
 *Josh Kiger*  
 *Andy Merdzinski*  
 *Riley Mulford*   
-*Jordan Gagnon*
+*(Previous) Jordan Gagnon*
    
 **GAME OVERVIEW**
 
@@ -181,9 +181,9 @@
 **SPRING 2018 - TIMELINE**
  
  * *Sprint 1*
-  * Finish Unity3D conversion
-  * Flesh out menu art (Give each menu matching aesthetic to the main menu)
-  * Research Note Spawning techniques (Stepmania style inspirations (*.sm files and parsing))
+   * Finish Unity3D conversion
+   * Flesh out menu art (Give each menu matching aesthetic to the main menu)
+   * Research Note Spawning techniques (Stepmania style inspirations (*.sm files and parsing))
 
 * *Sprint 2*
   * Finalize combat mechanics
