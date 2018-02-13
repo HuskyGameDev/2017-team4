@@ -8,6 +8,8 @@ public class Hitzones : MonoBehaviour
     private Animator anim;
     public ScoreDisplay scoreDisplay;
     public ActionSuccess actionSuccess;
+	public AudioSource noteSuccess;
+	public AudioSource noteFail;
 
     // Use this for initialization
     void Start()
@@ -69,14 +71,16 @@ public class Hitzones : MonoBehaviour
                 actionSuccess.AdjustSuccessRate(1);
             }
             if (acc > 0.9F)
-            {
+			{
                 anim.Play("perfect");
                 scoreDisplay.IncreaseScore(100);
                 actionSuccess.AdjustSuccessRate(2);
             }
+			noteSuccess.Play ();
         }
         else
         {
+			noteFail.Play ();
             anim.Play("miss");
             actionSuccess.AdjustSuccessRate(-5);
             // break combo
