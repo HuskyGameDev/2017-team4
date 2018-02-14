@@ -2420,6 +2420,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 114939581992156550, guid: 197d399ee0958df4b9465da668a5c567, type: 2}
   - {fileID: 114592400825933540, guid: 0821505c10d50f94ebcc2fa89c376908, type: 2}
+  - {fileID: 114981651868355118, guid: c49a38be2cdfd1741bbb99daefff4baa, type: 2}
   enemyHealthDisplay: {fileID: 1124803689}
   player: {fileID: 797762646}
 --- !u!4 &1347667597
