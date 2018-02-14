@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     private Animator anim;
     public PlayerStats pStats;
     private int playerHealth;
+	public AudioSource evasionSound;
+	public AudioSource attackSound;
+	public AudioSource defenseSound;
 
     // Use this for initialization
     void Start()
@@ -35,21 +38,24 @@ public class Player : MonoBehaviour
     {
         switch (actionSwapper.GetActionIndex())
         {
-            case 1:
+			case 1:
                 // attack
                 //Debug.Log("Player attacks...");
-                anim.Play("PlayerAttack");
-                enemy.DamageEnemy(pStats.GetForceStat());
+				anim.Play ("PlayerAttack");
+				enemy.DamageEnemy (pStats.GetForceStat ());
+				attackSound.Play ();
                 break;
-            case 2:
+			case 2:
                 // evade
                 //Debug.Log("Player evades...");
-                anim.Play("PlayerEvade");
+				anim.Play ("PlayerEvade");
+				evasionSound.Play ();
                 break;
-            default:
+			default:
                 // defend
                 //Debug.Log("Player defends...");
-                anim.Play("PlayerDefend");
+				anim.Play ("PlayerDefend");
+				defenseSound.Play ();
                 break;
         }
     }
