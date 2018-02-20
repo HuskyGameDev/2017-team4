@@ -2421,6 +2421,10 @@ MonoBehaviour:
   - {fileID: 114939581992156550, guid: 197d399ee0958df4b9465da668a5c567, type: 2}
   - {fileID: 114592400825933540, guid: 0821505c10d50f94ebcc2fa89c376908, type: 2}
   - {fileID: 114981651868355118, guid: c49a38be2cdfd1741bbb99daefff4baa, type: 2}
+  - {fileID: 114251890882861900, guid: dfcb2dd9c58c46b4380f2e7661d4c65c, type: 2}
+  - {fileID: 114078446562041368, guid: d71efadf458c61f4ab80905aeca0ad2b, type: 2}
+  - {fileID: 114639394855956448, guid: d564d8372c1183b46a0d24cc16413e34, type: 2}
+  - {fileID: 114903871744365404, guid: 6ef0cb81df4d09b4c914726d05489225, type: 2}
   enemyHealthDisplay: {fileID: 1124803689}
   player: {fileID: 797762646}
 --- !u!4 &1347667597
