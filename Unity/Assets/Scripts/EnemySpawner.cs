@@ -50,4 +50,9 @@ public class EnemySpawner : MonoBehaviour
         }
         enemyHealthDisplay.text = currentEnemyHealth + "/" + currentEnemy.maxHealth;
     }
+
+	public int GetEnemyResistance()
+	{
+		return currentEnemy.resistance;
+	}
 }
