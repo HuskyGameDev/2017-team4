@@ -45,4 +45,10 @@ public class ActionSuccess : MonoBehaviour
         indicators[actionIndex].transform.position 
             = new Vector3(xPos, indicators[actionIndex].transform.position.y, 0);
     }
+
+	//Return an action's success rate
+	public int getActionSuccess(int index)
+	{
+		return successRates[index];
+	}
 }
