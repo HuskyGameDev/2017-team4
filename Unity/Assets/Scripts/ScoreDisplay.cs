@@ -5,14 +5,18 @@ using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    private Text scoreText;
+    public Text scoreText;
+	public Text songTitle;
     private int score;
+	public LevelInfo info;
 
     // Use this for initialization
     void Start()
     {
-        scoreText = GetComponent<Text>();
-        scoreText.text = "Score: 0";
+		if (scoreText != null)
+        	scoreText.text = "Score: 0";
+		if (songTitle != null && info != null)		//Unity throws error if these aren't here
+			songTitle.text = info.GetSongTitle();
     }
 
     /// <summary>

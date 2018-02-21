@@ -95,4 +95,20 @@ public class LevelInfo : MonoBehaviour
 			return 0;
 		}
 	}
+
+
+	public string GetSongTitle()
+	{
+		switch (titleIndex)
+		{
+		case 1:
+			return "Theme of DD";
+		case 2:
+			return "Silky Smooth Idea";
+		case 3:
+			return "It's a Trap";
+		default:
+			return "TEST";
+		}
+	}
 }
