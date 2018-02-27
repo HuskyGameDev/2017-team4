@@ -1567,6 +1567,8 @@ MonoBehaviour:
   playerHealthDisplay: {fileID: 1054767973}
   enemy: {fileID: 1347667596}
   pStats: {fileID: 1686475230}
+  actionSuccess: {fileID: 434890649}
+  info: {fileID: 870688822}
 --- !u!114 &797762647
 MonoBehaviour:
   m_ObjectHideFlags: 0

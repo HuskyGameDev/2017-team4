@@ -102,7 +102,7 @@ public class LevelInfo : MonoBehaviour
 		switch (titleIndex)
 		{
 		case 1:
-			return "Theme of DD";
+			return "Theme of Digital Demon";
 		case 2:
 			return "Silky Smooth Idea";
 		case 3:

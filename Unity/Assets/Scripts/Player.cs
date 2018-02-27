@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
 	private Animator anim;
 	public PlayerStats pStats;
 	private int playerHealth;
-	private ActionSuccess actionSuccess;
-	private LevelInfo info;
+	public ActionSuccess actionSuccess;
+	public LevelInfo info;
 
 	// Use this for initialization
 	void Start ()
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
 		case 2:
                 // evade
                 //Debug.Log("Player evades...");
-			anim.Play ("PlayerEvade");
+			//anim.Play ("PlayerEvade");
 			break;
 		default:
                 // defend
@@ -63,13 +63,37 @@ public class Player : MonoBehaviour
 	public void DamagePlayer (int potentialDamage)
 	{
 		//Remove health
-		playerHealth -= potentialDamage * Random.Range(1, 15);
+		switch (actionSwapper.GetActionIndex()) 
+		{
+			//player in defend
+			case 0:							//Determine damage						//Damage to reduce
+				playerHealth -= potentialDamage * Random.Range (1, 15) * (100 - CalculateDefend (potentialDamage)) / 100;
+				break;
+			//player in attack
+			case 1:
+				playerHealth -= potentialDamage * Random.Range (1, 15);
+				break;
+			//player in evade
+			case 2:
+				if (!CalculateEvasion ()) 
+				{	
+					playerHealth -= potentialDamage * Random.Range (1, 15);
+				} 
+				else 
+				{
+					anim.Play ("PlayerEvade");
+				}
+				break;
+		}
+
+
+			//playerHealth -= potentialDamage * Random.Range(1, 15);
 		// TESTING ONLY
 		if (playerHealth < 0)
 			playerHealth = pStats.GetMaxHealth ();
 		// MAKE AN END GAME SENARIO HERE PLEASE
 		// K THX
-		playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth ();
+		playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
 	}
 
 
