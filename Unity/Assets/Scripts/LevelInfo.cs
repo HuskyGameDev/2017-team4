@@ -96,7 +96,11 @@ public class LevelInfo : MonoBehaviour
 		}
 	}
 
-
+	
+	/// <summary>
+	/// Gets the song title.
+	/// </summary>
+	/// <returns>The song title.</returns>
 	public string GetSongTitle()
 	{
 		switch (titleIndex)
