@@ -12,7 +12,10 @@ public class StartUp : MonoBehaviour
 	private float noteSpeed;	//Speed of notes falling
 	private float spawnTime;	//Current time between note spawns
 	private AudioSource song;	//Current song being played
-	private float noteDelay;	//Delay between note spawns
+	private float noteDelay;	//Delay between note spawns 
+
+	private float longDelay;
+	private bool[] activeLanes = { false, false, false, false };
 
 	// Use this for initialization
 	void Start ()
@@ -29,6 +32,7 @@ public class StartUp : MonoBehaviour
 
 		//Set delay in seconds between notes
 		noteDelay = 60.0F / (float)Info.GetSongBpm ();
+		longDelay = 3.0F;
 
 		//Get note count
 			//noteCount = 129;  //Silky Smooth
@@ -51,7 +55,11 @@ public class StartUp : MonoBehaviour
 		//or equal to the specified delay
 		if (spawnTime >= noteDelay) {
 			spawnTime = 0;
-			SpawnNotes ();
+			if (Random.Range (0, 2) == 0) {
+				SpawnNotes ();
+			} else {
+				SpawnLongNotes ();
+			}
 		} else {
 			//Application.Quit ();
 		}
@@ -62,14 +70,36 @@ public class StartUp : MonoBehaviour
 	void SpawnNotes ()
 	{
 		//Spawn random note
-		var note = Instantiate (Notes [Random.Range (0, 4)]);
+		int noteIndex = Random.Range (0, 4);
+		if (activeLanes [noteIndex] == true) {
+			return;
+		}
+		var note = Instantiate (Notes [noteIndex]);
+		activeLanes [noteIndex] = true;
 
 		//Set note speed
 		note.SetSpeed (noteSpeed);
 
 		//Decrement from total note count
 		noteCount--;
-		if (noteCount <= 0)
+		if (noteCount <= 0) {
 			Destroy (this.gameObject);
+			activeLanes [noteIndex] = false;
+		}
+	}
+
+	void SpawnLongNotes ()
+	{
+		int noteIndex = Random.Range (4, 8);
+		var note = Instantiate (Notes [noteIndex]);
+		activeLanes [noteIndex - 4] = true;
+
+		note.SetSpeed (noteSpeed);
+
+		noteCount--;
+		if (noteCount <= 0) {
+			Destroy (this.gameObject);
+			activeLanes [noteIndex] = false;
+		}
 	}
 }
