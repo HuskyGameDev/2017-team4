@@ -27,6 +27,15 @@ public class Hitzones : MonoBehaviour
             AttemptHitNote(KeyCode.E);
         if (Input.GetKeyDown(KeyCode.R))
             AttemptHitNote(KeyCode.R);
+
+		if (Input.GetKeyDown(KeyCode.A))
+			AttemptHitNote(KeyCode.A);
+		if (Input.GetKeyDown(KeyCode.S))
+			AttemptHitNote(KeyCode.S);
+		if (Input.GetKeyDown(KeyCode.D))
+			AttemptHitNote(KeyCode.D);
+		if (Input.GetKeyDown(KeyCode.F))
+			AttemptHitNote(KeyCode.F);
     }
 
     void OnTriggerEnter2D(Collider2D other)

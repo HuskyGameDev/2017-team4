@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58871556568296084}
   - component: {fileID: 50360777888569854}
   m_Layer: 0
-  m_Name: ENote
+  m_Name: Enote_Long
   m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd537af87956f4aa691aaadc3bf183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteKey: 101
+  noteKey: 100
 --- !u!212 &212872157279148540
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 6381eb59b7ec5ae4289bb4954fdb0702, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6084f873885df546bf27d0c8c3b6006, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

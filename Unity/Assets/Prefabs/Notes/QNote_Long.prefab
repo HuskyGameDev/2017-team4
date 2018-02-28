@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58494670215538060}
   - component: {fileID: 50254025519237766}
   m_Layer: 0
-  m_Name: QNote
+  m_Name: QNote_Long
   m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd537af87956f4aa691aaadc3bf183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteKey: 113
+  noteKey: 97
 --- !u!212 &212415968511774206
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5598b3b5ca121484fbbbe1752bfc49ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f23805876a8efa140832a8daee2c6330, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
