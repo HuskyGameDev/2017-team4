@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 	public ActionSuccess actionSuccess;
 	public LevelInfo info;
 
+	private Queue<string> actionStock;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour
 		//pStats = GetComponent<PlayerStats>();
 		playerHealth = pStats.GetMaxHealth ();
 		playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth ();
+		actionStock = new Queue<string>();
 	}
 	
 	// Update is called once per frame
@@ -45,12 +48,20 @@ public class Player : MonoBehaviour
 		case 2:
                 // evade
                 //Debug.Log("Player evades...");
-			//anim.Play ("PlayerEvade");
+			if (actionStock.Count < 3) 
+			{
+				actionStock.Enqueue ("evade");
+				Debug.Log("add evade");
+			}
 			break;
 		default:
                 // defend
                 //Debug.Log("Player defends...");
-			anim.Play ("PlayerDefend");
+			if (actionStock.Count < 3) 
+			{
+				actionStock.Enqueue ("defend");
+				Debug.Log("add defend");
+			}
 			break;
 		}
 	}
@@ -63,27 +74,31 @@ public class Player : MonoBehaviour
 	public void DamagePlayer (int potentialDamage)
 	{
 		//Remove health
-		switch (actionSwapper.GetActionIndex()) 
+		
+		//player can evade
+		if (actionStock.Count > 0 && actionStock.Peek().Equals("evade"))
 		{
-			//player in defend
-			case 0:							//Determine damage						//Damage to reduce
-				playerHealth -= potentialDamage * Random.Range (1, 15) * (100 - CalculateDefend (potentialDamage)) / 100;
-				break;
-			//player in attack
-			case 1:
+			if (!CalculateEvasion ()) 
+			{	
 				playerHealth -= potentialDamage * Random.Range (1, 15);
-				break;
-			//player in evade
-			case 2:
-				if (!CalculateEvasion ()) 
-				{	
-					playerHealth -= potentialDamage * Random.Range (1, 15);
-				} 
-				else 
-				{
-					anim.Play ("PlayerEvade");
-				}
-				break;
+			} 
+			else 
+			{
+				anim.Play ("PlayerEvade");
+			}
+			actionStock.Dequeue();
+		}
+		//player can defend
+		else if(actionStock.Count > 0 && actionStock.Peek().Equals("defend"))
+		{ 							//Determine damage						//Damage to reduce
+			playerHealth -= potentialDamage * Random.Range (1, 15) * (100 - CalculateDefend (potentialDamage)) / 100;
+			actionStock.Dequeue();
+			anim.Play("PlayerDefend");
+		}
+		//player in attack or stock is empty
+		else
+		{
+			playerHealth -= potentialDamage * Random.Range (1, 15);
 		}
 
 
