@@ -16,6 +16,11 @@ public class Player : MonoBehaviour
 
 	private Queue<string> actionStock;
 
+	public StockIcon[] StockIcons; 
+
+	public Sprite evadeIcon;
+	public Sprite defendIcon;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -38,31 +43,34 @@ public class Player : MonoBehaviour
 	/// </summary>
 	public void PerformAction ()
 	{
-		switch (actionSwapper.GetActionIndex ()) {
-		case 1:
+		switch (actionSwapper.GetActionIndex ()) 
+		{
+			case 1:
                 // attack
                 //Debug.Log("Player attacks...");
-			anim.Play ("PlayerAttack");
-			enemy.DamageEnemy (pStats.GetForceStat ());
-			break;
-		case 2:
+				anim.Play ("PlayerAttack");
+				enemy.DamageEnemy (pStats.GetForceStat ());
+				break;
+			case 2:
                 // evade
                 //Debug.Log("Player evades...");
-			if (actionStock.Count < 3) 
-			{
-				actionStock.Enqueue ("evade");
-				Debug.Log("add evade");
-			}
-			break;
-		default:
+				if (actionStock.Count < 3) 
+				{
+					var temp = Instantiate(StockIcons[actionStock.Count]).GetComponent<SpriteRenderer>();
+					temp.sprite = evadeIcon;
+					actionStock.Enqueue ("evade");
+					Debug.Log("add evade");
+				}
+				break;
+			default:
                 // defend
                 //Debug.Log("Player defends...");
-			if (actionStock.Count < 3) 
-			{
-				actionStock.Enqueue ("defend");
-				Debug.Log("add defend");
-			}
-			break;
+				if (actionStock.Count < 3) 
+				{
+					actionStock.Enqueue ("defend");
+					Debug.Log("add defend");
+				}
+				break;
 		}
 	}
 

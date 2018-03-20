@@ -1571,6 +1571,12 @@ MonoBehaviour:
   pStats: {fileID: 1686475230}
   actionSuccess: {fileID: 434890649}
   info: {fileID: 870688822}
+  StockIcons:
+  - {fileID: 114331850321255332, guid: 3333682ef578a8c48accc3129dfbafa2, type: 2}
+  - {fileID: 114237748980566004, guid: 176815a5a4189a342bb983926f67d9ab, type: 2}
+  - {fileID: 114452518691413480, guid: 6d34d6d96c622334c92ad905ce5bc419, type: 2}
+  evadeIcon: {fileID: 21300000, guid: 8f7d358d043e059409b2d8de1f89f37c, type: 3}
+  defendIcon: {fileID: 21300000, guid: 7549492acba626a4e8f1541a6fec5edb, type: 3}
 --- !u!114 &797762647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3712,7 +3718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc915991b1159f94d8399cd3e54e31aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxFillTime: 8
+  maxFillTime: 18
   fillBar: {fileID: 834453641}
   actionGradient: {fileID: 983304498}
   OnFill:
