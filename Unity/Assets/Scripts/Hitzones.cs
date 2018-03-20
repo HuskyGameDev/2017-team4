@@ -8,6 +8,8 @@ public class Hitzones : MonoBehaviour
     private Animator anim;
     public ScoreDisplay scoreDisplay;
     public ActionSuccess actionSuccess;
+    public AudioSource hitSound;
+    public AudioSource missSound;
 
     // Use this for initialization
     void Start()
@@ -48,6 +50,7 @@ public class Hitzones : MonoBehaviour
         var note = noteQueue.Peek();
         if (note.GetNoteKey() == key)
         {
+            hitSound.Play();
             var acc = (1.28F - Mathf.Abs(note.gameObject.transform.position.y - (-0.67F))) / 1.28;
 
             if (acc <= 0.4F)
@@ -78,6 +81,7 @@ public class Hitzones : MonoBehaviour
         else
         {
             anim.Play("miss");
+            missSound.Play();
             actionSuccess.AdjustSuccessRate(-5);
             // break combo
         }
