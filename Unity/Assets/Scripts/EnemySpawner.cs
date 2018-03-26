@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
+    // list of enemy prefabs
     public Enemy[] enemies;
+
     public Text enemyHealthDisplay;
     public Player player;
+    public ResultsValues results;
 
     private Enemy currentEnemy;
     private int currentEnemyHealth;
@@ -34,16 +37,18 @@ public class EnemySpawner : MonoBehaviour
     }
 
     /// <summary>
-    /// Damages the player.
+    /// Damages the enemy.
     /// </summary>
-    /// <param name="enemyForce">Enemy force.</param>
-    /// <param name="enemyAccuracy">Enemy accuracy.</param>
+    /// <param name="force">Player force.</param>
+    /// <param name="accuracy">Accuracy of action.</param>
     public void DamageEnemy(int force, int accuracy = 100)
     {
-        currentEnemyHealth -= force * Random.Range(1, 15);
+        currentEnemyHealth -= force;
+        results.SetDamageDealt(force + results.GetDamageDealt());
         if (currentEnemyHealth < 0)
         {
             Destroy(currentEnemy.gameObject);
+            results.SetEnemiesKilled(results.GetEnemiesKilled() + 1);
             Invoke("SpawnEnemy", 5);
             enemyHealthDisplay.text = "DEAD";
             return;
@@ -51,8 +56,8 @@ public class EnemySpawner : MonoBehaviour
         enemyHealthDisplay.text = currentEnemyHealth + "/" + currentEnemy.maxHealth;
     }
 
-	public int GetEnemyResistance()
-	{
-		return currentEnemy.resistance;
-	}
+    public int GetEnemyResistance()
+    {
+        return currentEnemy.resistance;
+    }
 }
