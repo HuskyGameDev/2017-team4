@@ -10,6 +10,7 @@ public class Hitzones : MonoBehaviour
     public ActionSuccess actionSuccess;
     public AudioSource hitSound;
     public AudioSource missSound;
+    public ResultsValues results;
 
     // Use this for initialization
     void Start()
@@ -51,6 +52,7 @@ public class Hitzones : MonoBehaviour
         if (note.GetNoteKey() == key)
         {
             hitSound.Play();
+            results.SetNotesHit(results.GetNotesHit() + 1);
             var acc = (1.28F - Mathf.Abs(note.gameObject.transform.position.y - (-0.67F))) / 1.28;
 
             if (acc <= 0.4F)

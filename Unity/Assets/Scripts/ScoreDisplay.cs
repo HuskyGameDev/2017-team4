@@ -6,16 +6,17 @@ using UnityEngine.UI;
 public class ScoreDisplay : MonoBehaviour
 {
     public Text scoreText;
-	public Text songTitle;
+    public Text songTitle;
     private int score;
-	public LevelInfo info;
+    public LevelInfo info;
+    public ResultsValues results;
 
     // Use this for initialization
     void Start()
     {
-		if (scoreText != null)
-        	scoreText.text = "Score: 0";
-		if (songTitle != null && info != null)		//Unity throws error if these aren't here
+        if (scoreText != null)
+            scoreText.text = "Score: 0";
+        if (songTitle != null && info != null)		//Unity throws error if these aren't here
 			songTitle.text = info.GetSongTitle();
     }
 
@@ -27,5 +28,6 @@ public class ScoreDisplay : MonoBehaviour
     {
         score += amount;
         scoreText.text = "Score: " + score.ToString();
+        results.SetScore(results.GetScore() + 1);
     }
 }

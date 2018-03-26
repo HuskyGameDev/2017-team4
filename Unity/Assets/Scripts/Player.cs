@@ -5,27 +5,33 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    // action managers for current action and effectiveness
     public ActionSwapper actionSwapper;
-    public Text playerHealthDisplay;
-    public EnemySpawner enemy;
-    private Animator anim;
-    public PlayerStats pStats;
-    private int playerHealth;
     public ActionSuccess actionSuccess;
+    // enemy manager (to reference current enemy)
+    public EnemySpawner enemy;
+    // animator on this player object
+    private Animator anim;
+    // object holding player stats
+    public PlayerStats pStats;
+    // players current health
+    private int playerHealth;
+    public Text playerHealthDisplay;
+    // info for current song (for difficulty)
     public LevelInfo info;
-
     // action stock variables
     public SpriteRenderer[] stockIcons;
     public Sprite evadeIcon;
     public Sprite defendIcon;
-
+    // queue for stocked actions (eva & def)
     private Queue<string> actionStock;
+    // result values for accumlating total values
+    public ResultsValues results;
 
     // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
-        //pStats = GetComponent<PlayerStats>();
         playerHealth = pStats.GetMaxHealth();
         playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
         actionStock = new Queue<string>();
@@ -42,7 +48,7 @@ public class Player : MonoBehaviour
                 // attack
                 //Debug.Log("Player attacks...");
                 anim.Play("PlayerAttack");
-                enemy.DamageEnemy(pStats.GetForceStat());
+                enemy.DamageEnemy(CalculateAttack());
                 break;
             case 2:
                 // evade
@@ -74,39 +80,38 @@ public class Player : MonoBehaviour
     /// <param name="enemyAccuracy">Enemy accuracy.</param>
     public void DamagePlayer(int potentialDamage)
     {
-        //Remove health
-		
-        //player can evade
+        var trueDamage = 0;
+        // player can evade
         if (actionStock.Count > 0 && actionStock.Peek().Equals("evade"))
         {
             // calculate chance of successful evasion
             if (!CalculateEvasion())
-                playerHealth -= potentialDamage * Random.Range(1, 15);
+                trueDamage = potentialDamage * Random.Range(1, 15);
             else
                 anim.Play("PlayerEvade");
             DequeueStockIcons();
         }
-		//player can defend
+		// player can defend
 		else if (actionStock.Count > 0 && actionStock.Peek().Equals("defend"))
-        { 							//Determine damage						//Damage to reduce
-            playerHealth -= potentialDamage * Random.Range(1, 15) * (100 - CalculateDefend(potentialDamage)) / 100;
+        {   
+            // damage - shielded amount
+            trueDamage = potentialDamage * Random.Range(1, 15) * (100 - CalculateDefend(potentialDamage)) / 100;
             anim.Play("PlayerDefend");
             DequeueStockIcons();
         }
-		//player in attack or stock is empty
+		// player has no stocked actions
 		else
-            playerHealth -= potentialDamage * Random.Range(1, 15);
+            trueDamage = potentialDamage * Random.Range(1, 15);
+        playerHealth -= trueDamage;
+        results.SetDamageTaken(trueDamage + results.GetDamageTaken());
 
-        //playerHealth -= potentialDamage * Random.Range(1, 15);
-        // TESTING ONLY
+        // for now, reset player health if killed
         if (playerHealth < 0)
             playerHealth = pStats.GetMaxHealth();
-        // MAKE AN END GAME SENARIO HERE PLEASE
-        // K THX
+        // set health text
         playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
     }
-
-
+        
     //Calculate chance to evade
     private bool CalculateEvasion()
     {
