@@ -14,6 +14,7 @@ public class SceneTransition : MonoBehaviour
     ///     Settings    = 3
     ///     QuitGame    = 4
     ///     Gameplay    = 5
+    ///     Results     = 6
     /// </summary>
     /// <param name="scene_index">Scene index.</param>
     public void LoadScene (int scene_index)

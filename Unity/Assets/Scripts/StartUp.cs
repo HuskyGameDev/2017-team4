@@ -8,7 +8,7 @@ public class StartUp : MonoBehaviour
     public LevelInfo Info;
     public Note[] Notes;
     public ResultsValues results;
-    public SceneTransition sceneTransition;
+    public EndGame endGame;
 
     private int noteCount;
     //Number of notes in song
@@ -35,7 +35,7 @@ public class StartUp : MonoBehaviour
         song = Instantiate(Titles[Info.GetSongIndex()]);
 
         //Delay song start
-        song.PlayDelayed(2.9F); 
+        song.PlayDelayed(2.9F);
 
         //Set delay in seconds between notes
         noteDelay = 60.0F / (float)Info.GetSongBpm();
@@ -56,7 +56,10 @@ public class StartUp : MonoBehaviour
     {
         // when there are no notes, and song is done
         if (noteCount <= 0 && !song.isPlaying)
-            sceneTransition.LoadScene(6);
+        {
+            endGame.EndSong();
+            Destroy(this.gameObject);
+        }
 
         //Increment time between last Update call
         spawnTime += Time.deltaTime;
