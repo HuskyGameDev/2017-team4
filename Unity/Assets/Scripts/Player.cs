@@ -29,11 +29,18 @@ public class Player : MonoBehaviour
 	public ResultsValues results;
 	// sounds for each player action
 	public AudioSource[] actionSounds;
+	//Display damage text
+	public Text playerDamageDisplay;
+	public Text enemyDamageDisplay;
+	private Animator pDamageTextAnim;
+	private Animator eDamageTextAnim;
 
 	// Use this for initialization
 	void Start()
 	{
 		anim = GetComponent<Animator>();
+		pDamageTextAnim = playerDamageDisplay.GetComponent<Animator>();
+		eDamageTextAnim = enemyDamageDisplay.GetComponent<Animator>();
 		playerHealth = pStats.GetMaxHealth();
 		playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
 		actionStock = new Queue<string>();
@@ -112,6 +119,10 @@ public class Player : MonoBehaviour
 		playerHealth -= trueDamage;
 		results.SetDamageTaken(trueDamage + results.GetDamageTaken());
 
+		//Set damage taken text
+		playerDamageDisplay.text = trueDamage.ToString();
+		pDamageTextAnim.Play("showDamage");
+
 		// for now, reset player health if killed
 		if (playerHealth < 0)
 			playerHealth = pStats.GetMaxHealth();
@@ -141,12 +152,19 @@ public class Player : MonoBehaviour
 
 
 	//Calculate amount of damage for attack
-	private int CalculateAttack()
+	private int CalculateAttack ()
 	{
-		var attack = actionSuccess.getActionSuccess(1);
-		var enemyResistance = enemy.GetEnemyResistance();
+		var attack = actionSuccess.getActionSuccess (1);
+		var enemyResistance = enemy.GetEnemyResistance ();
 		// return damage amount, but don't heal the enemy!
-		var rtn = (int)(attack / 5.0F + Random.Range(-enemyResistance, enemyResistance / 5.0F));
+		var rtn = (int)(attack / 5.0F + Random.Range (-enemyResistance, enemyResistance / 5.0F));
+
+		//Set damage given text
+		if (enemy.IsEnemyAlive ()) 
+		{
+			enemyDamageDisplay.text = rtn.ToString ();
+			eDamageTextAnim.Play ("showDamage");
+		}
 		return rtn > 0 ? rtn : 0;
 	}
 
