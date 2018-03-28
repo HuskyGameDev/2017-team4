@@ -66,7 +66,7 @@ public class StartUp : MonoBehaviour
 
         //Spawn a note and reset time counter when it is greater than
         //or equal to the specified delay
-        if (spawnTime >= noteDelay)
+		if (spawnTime >= noteDelay && noteCount > 0)
         {
             spawnTime = 0;
             SpawnNotes();

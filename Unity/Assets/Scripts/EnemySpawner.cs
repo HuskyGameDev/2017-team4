@@ -32,10 +32,13 @@ public class EnemySpawner : MonoBehaviour
     /// <summary>
     /// Performs the enemy action.
     /// </summary>
-    public void PerformEnemyAction()
-    {
-        player.DamagePlayer(currentEnemy.force);    
-    }
+    public void PerformEnemyAction ()
+	{
+		if (IsEnemyAlive ()) 
+		{
+			player.DamagePlayer (currentEnemy.force);    
+		}
+	}
 
     /// <summary>
     /// Damages the enemy.
@@ -62,4 +65,13 @@ public class EnemySpawner : MonoBehaviour
     {
         return currentEnemy.resistance;
     }
+
+	/// <summary>
+	/// Determines whether this instance of enemy is alive.
+	/// </summary>
+	/// <returns><c>true</c> if this instance is enemy alive; otherwise, <c>false</c>.</returns>
+	public bool IsEnemyAlive ()
+	{
+		return currentEnemyHealth > 0; 
+	}
 }

@@ -1,43 +1,50 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    // action managers for current action and effectiveness
-    public ActionSwapper actionSwapper;
-    public ActionSuccess actionSuccess;
-    // enemy manager (to reference current enemy)
-    public EnemySpawner enemy;
-    // animator on this player object
-    private Animator anim;
-    // object holding player stats
-    public PlayerStats pStats;
-    // players current health
-    private int playerHealth;
-    public Text playerHealthDisplay;
-    // info for current song (for difficulty)
-    public LevelInfo info;
-    // action stock variables
-    public SpriteRenderer[] stockIcons;
-    public Sprite evadeIcon;
-    public Sprite defendIcon;
-    // queue for stocked actions (eva & def)
-    private Queue<string> actionStock;
-    // result values for accumlating total values
-    public ResultsValues results;
-    // sounds for each player action
-    public AudioSource[] actionSounds;
+	// action managers for current action and effectiveness
+	public ActionSwapper actionSwapper;
+	public ActionSuccess actionSuccess;
+	// enemy manager (to reference current enemy)
+	public EnemySpawner enemy;
+	// animator on this player object
+	private Animator anim;
+	// object holding player stats
+	public PlayerStats pStats;
+	// players current health
+	private int playerHealth;
+	public Text playerHealthDisplay;
+	// info for current song (for difficulty)
+	public LevelInfo info;
+	// action stock variables
+	public SpriteRenderer[] stockIcons;
+	public Sprite evadeIcon;
+	public Sprite defendIcon;
+	// queue for stocked actions (eva & def)
+	private Queue<string> actionStock;
+	// result values for accumlating total values
+	public ResultsValues results;
+	// sounds for each player action
+	public AudioSource[] actionSounds;
+	//Display damage text
+	public Text playerDamageDisplay;
+	public Text enemyDamageDisplay;
+	private Animator pDamageTextAnim;
+	private Animator eDamageTextAnim;
 
-    // Use this for initialization
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        playerHealth = pStats.GetMaxHealth();
-        playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
-        actionStock = new Queue<string>();
-    }
+	// Use this for initialization
+	void Start()
+	{
+		anim = GetComponent<Animator>();
+		pDamageTextAnim = playerDamageDisplay.GetComponent<Animator>();
+		eDamageTextAnim = enemyDamageDisplay.GetComponent<Animator>();
+		playerHealth = pStats.GetMaxHealth();
+		playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
+		actionStock = new Queue<string>();
+	}
 
     /// <summary>
     /// Performs the whichever action is currently focused on.
@@ -112,12 +119,16 @@ public class Player : MonoBehaviour
         playerHealth -= trueDamage;
         results.SetDamageTaken(trueDamage + results.GetDamageTaken());
 
-        // for now, reset player health if killed
-        if (playerHealth < 0)
-            playerHealth = pStats.GetMaxHealth();
-        // set health text
-        playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
-    }
+		//Set damage taken text
+		playerDamageDisplay.text = trueDamage.ToString();
+		pDamageTextAnim.Play("showDamage");
+
+		// for now, reset player health if killed
+		if (playerHealth < 0)
+			playerHealth = pStats.GetMaxHealth();
+		// set health text
+		playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
+	}
         
     //Calculate chance to evade
     private bool CalculateEvasion()
@@ -139,16 +150,22 @@ public class Player : MonoBehaviour
         return Random.Range(0, 100) < evade;
     }
 
+	//Calculate amount of damage for attack
+	private int CalculateAttack ()
+	{
+		var attack = actionSuccess.getActionSuccess (1);
+		var enemyResistance = enemy.GetEnemyResistance ();
+		// return damage amount, but don't heal the enemy!
+		var rtn = (int)(attack / 5.0F + Random.Range (-enemyResistance, enemyResistance / 5.0F));
 
-    //Calculate amount of damage for attack
-    private int CalculateAttack()
-    {
-        var attack = actionSuccess.getActionSuccess(1);
-        var enemyResistance = enemy.GetEnemyResistance();
-        // return damage amount, but don't heal the enemy!
-        var rtn = (int)(attack / 5.0F + Random.Range(-enemyResistance, enemyResistance / 5.0F));
-        return rtn > 0 ? rtn : 0;
-    }
+		//Set damage given text
+		if (enemy.IsEnemyAlive ()) 
+		{
+			enemyDamageDisplay.text = rtn.ToString ();
+			eDamageTextAnim.Play ("showDamage");
+		}
+		return rtn > 0 ? rtn : 0;
+	}
 
     //Calculate amount of damage to reduce for defend
     private int CalculateDefend(int potentialDamage)
