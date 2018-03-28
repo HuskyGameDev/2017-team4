@@ -3317,6 +3317,7 @@ MonoBehaviour:
   enemyHealthDisplay: {fileID: 1124803689}
   player: {fileID: 797762646}
   results: {fileID: 1287041200}
+  score: {fileID: 269172742}
 --- !u!4 &1347667597
 Transform:
   m_ObjectHideFlags: 0
