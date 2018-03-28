@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     public Text enemyHealthDisplay;
     public Player player;
     public ResultsValues results;
+    public ScoreDisplay score;
 
     private Enemy currentEnemy;
     private int currentEnemyHealth;
@@ -50,6 +51,7 @@ public class EnemySpawner : MonoBehaviour
         results.SetDamageDealt(force + results.GetDamageDealt());
         if (currentEnemyHealth < 0)
         {
+            score.IncreaseScore(currentEnemy.points);
             Destroy(currentEnemy.gameObject);
             results.SetEnemiesKilled(results.GetEnemiesKilled() + 1);
             Invoke("SpawnEnemy", 5);

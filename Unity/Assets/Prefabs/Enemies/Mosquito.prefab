@@ -56,6 +56,7 @@ MonoBehaviour:
   force: 7
   resistance: 1
   dexterity: 5
+  points: 795
 --- !u!212 &212208353978352574
 SpriteRenderer:
   m_ObjectHideFlags: 1
