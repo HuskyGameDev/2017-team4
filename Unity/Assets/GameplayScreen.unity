@@ -2173,6 +2173,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  enemyInstance: {fileID: 1347667596}
+  isEnemy: 0
 --- !u!1 &797762642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4977,3 +4979,5 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  enemyInstance: {fileID: 1347667596}
+  isEnemy: 1

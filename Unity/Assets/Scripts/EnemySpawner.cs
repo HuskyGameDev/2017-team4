@@ -34,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
     /// </summary>
     public void PerformEnemyAction ()
 	{
+		//Perform action if enemy is alive
 		if (IsEnemyAlive ()) 
 		{
 			player.DamagePlayer (currentEnemy.force);    

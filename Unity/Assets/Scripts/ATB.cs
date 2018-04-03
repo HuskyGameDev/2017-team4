@@ -9,7 +9,9 @@ public class ATB : MonoBehaviour
 	public GameObject fillBar;
 	public GameObject actionGradient;
 	public UnityEvent OnFill;
+	public EnemySpawner enemyInstance;
 
+	public bool isEnemy;
 	private float fillTime;
 
 	// Use this for initialization
@@ -24,9 +26,19 @@ public class ATB : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update ()
-	{        
+	{
+		//If this ATB is used for enemy and enemy is dead, reset the ATB and stop filling
+		if (isEnemy && enemyInstance.IsEnemyAlive () == false) 
+		{
+			fillTime = 0;
+			fillBar.transform.localScale = new Vector3 (Mathf.Clamp (0, 0, 1), 1, 0);
+			return;
+		}
+		
+		//Fill player and enemy ATB
 		fillTime += Time.deltaTime;
-		if (fillTime >= maxFillTime) {
+		if (fillTime >= maxFillTime) 
+		{
 			fillTime = 0;
 			OnFill.Invoke ();
 		}
