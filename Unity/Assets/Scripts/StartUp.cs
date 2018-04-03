@@ -24,6 +24,9 @@ public class StartUp : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // stop the menu music
+        GameObject.FindGameObjectsWithTag ("PersistentMenuSound")[0].GetComponent<AudioSource>().Stop();
+
         // reset results
         results.ResetValues();
 
