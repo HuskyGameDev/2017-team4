@@ -10,13 +10,17 @@ public class PlayerStats : MonoBehaviour
     static int res;
     static int dex;
 
+	static List<string> purchasedCostumes;
+
     void Start()
     {
         score = 0;
         maxHealth = 999;
         force = 1;
         res = 1;
-        dex = 1;
+		dex = 1;
+		purchasedCostumes = new List<string>();
+		purchasedCostumes.Add ("0");
     }
 
     /// <summary>
@@ -100,4 +104,18 @@ public class PlayerStats : MonoBehaviour
     {
         dex += amount;
     }
+
+	public bool boughtCostume(string costume)
+	{
+		if (purchasedCostumes.Contains (costume)) 
+		{
+			return true;
+		} else
+			return false;
+	}
+
+	public void buyCostume(string costume)
+	{
+		purchasedCostumes.Add (costume);
+	}
 }

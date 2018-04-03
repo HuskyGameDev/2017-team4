@@ -95,17 +95,14 @@ public class LevelInfo : MonoBehaviour
 			return 0;
 		}
 	}
-	
-	/// <summary>
-	/// Gets the song title.
-	/// </summary>
-	/// <returns>The song title.</returns>
+
+
 	public string GetSongTitle()
 	{
 		switch (titleIndex)
 		{
 		case 1:
-			return "Theme of Digital Demon";
+			return "Theme of DD";
 		case 2:
 			return "Silky Smooth Idea";
 		case 3:
@@ -114,26 +111,4 @@ public class LevelInfo : MonoBehaviour
 			return "TEST";
 		}
 	}
-
-    /// <summary>
-    /// Gets the song's score requirement for the current index.
-    /// </summary>
-    /// <returns>The song bpm.</returns>
-    public int GetSongScoreRequirement()
-    {
-        switch (titleIndex)
-        {
-            case 1:
-                // Theme of DD
-                return 32100 + 5000;
-            case 2:
-                // Silky
-                return 12900 + 5000;
-            case 3:
-                // Trap
-                return 35900 + 5000;
-            default:
-                return 0;
-        }
-    }
 }

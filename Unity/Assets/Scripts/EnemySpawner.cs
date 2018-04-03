@@ -5,13 +5,9 @@ using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // list of enemy prefabs
     public Enemy[] enemies;
-
     public Text enemyHealthDisplay;
     public Player player;
-    public ResultsValues results;
-    public ScoreDisplay score;
 
     private Enemy currentEnemy;
     private int currentEnemyHealth;
@@ -32,28 +28,22 @@ public class EnemySpawner : MonoBehaviour
     /// <summary>
     /// Performs the enemy action.
     /// </summary>
-    public void PerformEnemyAction ()
-	{
-		if (IsEnemyAlive ()) 
-		{
-			player.DamagePlayer (currentEnemy.force);    
-		}
-	}
+    public void PerformEnemyAction()
+    {
+        player.DamagePlayer(currentEnemy.force);    
+    }
 
     /// <summary>
-    /// Damages the enemy.
+    /// Damages the player.
     /// </summary>
-    /// <param name="force">Player force.</param>
-    /// <param name="accuracy">Accuracy of action.</param>
+    /// <param name="enemyForce">Enemy force.</param>
+    /// <param name="enemyAccuracy">Enemy accuracy.</param>
     public void DamageEnemy(int force, int accuracy = 100)
     {
-        currentEnemyHealth -= force;
-        results.SetDamageDealt(force + results.GetDamageDealt());
+        currentEnemyHealth -= force * Random.Range(1, 15);
         if (currentEnemyHealth < 0)
         {
-            score.IncreaseScore(currentEnemy.points);
             Destroy(currentEnemy.gameObject);
-            results.SetEnemiesKilled(results.GetEnemiesKilled() + 1);
             Invoke("SpawnEnemy", 5);
             enemyHealthDisplay.text = "DEAD";
             return;
@@ -61,17 +51,8 @@ public class EnemySpawner : MonoBehaviour
         enemyHealthDisplay.text = currentEnemyHealth + "/" + currentEnemy.maxHealth;
     }
 
-    public int GetEnemyResistance()
-    {
-        return currentEnemy.resistance;
-    }
-
-	/// <summary>
-	/// Determines whether this instance of enemy is alive.
-	/// </summary>
-	/// <returns><c>true</c> if this instance is enemy alive; otherwise, <c>false</c>.</returns>
-	public bool IsEnemyAlive ()
+	public int GetEnemyResistance()
 	{
-		return currentEnemyHealth > 0; 
+		return currentEnemy.resistance;
 	}
 }
