@@ -159,7 +159,7 @@ public class Player : MonoBehaviour
 		var rtn = (int)(attack / 5.0F + Random.Range (-enemyResistance, enemyResistance / 5.0F));
 
 		//Set damage given text
-		if (enemy.IsEnemyAlive ()) 
+		if (enemy.IsEnemyAlive () && rtn >= 0) 
 		{
 			enemyDamageDisplay.text = rtn.ToString ();
 			eDamageTextAnim.Play ("showDamage");
