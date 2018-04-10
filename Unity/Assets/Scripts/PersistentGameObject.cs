@@ -9,7 +9,7 @@ public class PersistentGameObject : MonoBehaviour
 	{
 		DontDestroyOnLoad (this.gameObject);
 		// Prevent these sounds from being duplicated
-		if (FindObjectsOfType (GetType ()).Length > 3)
-			Destroy (this.gameObject);
+        if (FindObjectsOfType (GetType ()).Length > 3)
+            Destroy (this.gameObject);
 	}
 }
