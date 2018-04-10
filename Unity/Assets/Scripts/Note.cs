@@ -5,6 +5,12 @@ using UnityEngine;
 public class Note : MonoBehaviour
 {
     public KeyCode noteKey;
+	private float speed;
+
+	public float GetSpeed()
+	{
+		return speed;
+	}
 
     /// <summary>
     /// Sets the speed of the note.
@@ -24,4 +30,5 @@ public class Note : MonoBehaviour
     {
         return noteKey;
     }
+
 }

@@ -2008,6 +2008,8 @@ GameObject:
   - component: {fileID: 1043723572}
   - component: {fileID: 1043723571}
   - component: {fileID: 1043723570}
+  - component: {fileID: 1043723575}
+  - component: {fileID: 1043723574}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -2078,6 +2080,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1043723574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043723569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef40fef05c6cdf64586818d9f9289ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreDisplay: {fileID: 0}
+  actionSuccess: {fileID: 0}
+--- !u!114 &1043723575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043723569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18ccb956861ddc429ceb3a0347848ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreDisplay: {fileID: 0}
+  actionSuccess: {fileID: 0}
+  longnote: {fileID: 0}
 --- !u!1 &1054767971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,6 +3195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreDisplay: {fileID: 269172742}
   actionSuccess: {fileID: 434890649}
+  longnote: {fileID: 0}
 --- !u!95 &1828854745
 Animator:
   serializedVersion: 3

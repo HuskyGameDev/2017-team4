@@ -19,23 +19,18 @@ public class Hitzones : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-            AttemptHitNote(KeyCode.Q);
-        if (Input.GetKeyDown(KeyCode.W))
-            AttemptHitNote(KeyCode.W);
-        if (Input.GetKeyDown(KeyCode.E))
-            AttemptHitNote(KeyCode.E);
-        if (Input.GetKeyDown(KeyCode.R))
-            AttemptHitNote(KeyCode.R);
-
-		if (Input.GetKeyDown(KeyCode.A))
-			AttemptHitNote(KeyCode.A);
-		if (Input.GetKeyDown(KeyCode.S))
-			AttemptHitNote(KeyCode.S);
-		if (Input.GetKeyDown(KeyCode.D))
-			AttemptHitNote(KeyCode.D);
-		if (Input.GetKeyDown(KeyCode.F))
-			AttemptHitNote(KeyCode.F);
+		if (Input.GetKeyDown (KeyCode.Q)) {
+				AttemptHitNote (KeyCode.Q);
+		}
+		if (Input.GetKeyDown (KeyCode.W)) {
+				AttemptHitNote (KeyCode.W);
+		}
+		if (Input.GetKeyDown (KeyCode.E)) {
+				AttemptHitNote (KeyCode.E);
+		}
+		if (Input.GetKeyDown (KeyCode.R)) {
+				AttemptHitNote (KeyCode.R);
+		}
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -49,12 +44,15 @@ public class Hitzones : MonoBehaviour
         if (other.tag == "Note")
             noteQueue.Dequeue();
     }
+		
 
-    void AttemptHitNote(KeyCode key)
+
+void AttemptHitNote(KeyCode key)
     {
-        if (noteQueue.Count == 0)
-            return;
-        var note = noteQueue.Peek();
+		if (noteQueue.Count == 0)
+			return;
+		var note = noteQueue.Peek();
+
         if (note.GetNoteKey() == key)
         {
             var acc = (1.28F - Mathf.Abs(note.gameObject.transform.position.y - (-0.67F))) / 1.28;
