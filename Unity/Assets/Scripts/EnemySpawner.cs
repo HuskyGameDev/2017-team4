@@ -50,7 +50,7 @@ public class EnemySpawner : MonoBehaviour
     {
         currentEnemyHealth -= force;
         results.SetDamageDealt(force + results.GetDamageDealt());
-        if (currentEnemyHealth < 0)
+        if (currentEnemyHealth <= 0)
         {
             score.IncreaseScore(currentEnemy.points);
             Destroy(currentEnemy.gameObject);
