@@ -164,7 +164,7 @@ public class Player : MonoBehaviour
 			enemyDamageDisplay.text = rtn.ToString ();
 			eDamageTextAnim.Play ("showDamage");
 		}
-		return rtn > 0 ? rtn : 0;
+		return rtn < 0 ? rtn : 0;
 	}
 
     //Calculate amount of damage to reduce for defend

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MenuSoundManager : MonoBehaviour
 {
-	private AudioSource forwardSound;
-	private AudioSource backwardSound;
-    private AudioSource menuMusic;
+	private static AudioSource forwardSound;
+	private static AudioSource backwardSound;
+    private static AudioSource menuMusic;
     private float playtime;
 
 	// Use this for initialization
@@ -14,10 +14,15 @@ public class MenuSoundManager : MonoBehaviour
 	{
 		var sounds = GameObject.FindGameObjectsWithTag ("PersistentMenuSound");
 		// DFS - Ensure Forward is listed first
-		forwardSound = sounds [1].GetComponent<AudioSource>();
-		backwardSound = sounds [2].GetComponent<AudioSource>();
-        menuMusic = sounds [0].GetComponent<AudioSource>();
-
+        foreach (var sound in sounds)
+        {
+            if (forwardSound == null && sound.name == "ForwardSound")
+                forwardSound = sound.GetComponent<AudioSource>();
+            else if (backwardSound == null && sound.name == "BackwardSound")
+                backwardSound = sound.GetComponent<AudioSource>();
+            else
+                menuMusic = sound.GetComponent<AudioSource>();
+        }
         // Menu scenes: 0,1,2,3,4
         // Non-menu:    5,6
         var index = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;

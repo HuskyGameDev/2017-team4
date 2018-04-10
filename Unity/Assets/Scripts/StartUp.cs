@@ -24,9 +24,6 @@ public class StartUp : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // stop the menu music
-        GameObject.FindGameObjectsWithTag ("PersistentMenuSound")[0].GetComponent<AudioSource>().Stop();
-
         // reset results
         results.ResetValues();
 
@@ -52,6 +49,8 @@ public class StartUp : MonoBehaviour
 
         //Initialize time
         spawnTime = 0F;
+
+        GameObject.Find("MenuMusic").GetComponent<AudioSource>().Stop();
     }
 
     //Call note spawn method according to noteDelay
