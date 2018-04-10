@@ -50,7 +50,9 @@ public class StartUp : MonoBehaviour
         //Initialize time
         spawnTime = 0F;
 
-        GameObject.Find("MenuMusic").GetComponent<AudioSource>().Stop();
+        var menumusic = GameObject.Find("MenuMusic");
+		if (menumusic != null)
+			menumusic.GetComponent<AudioSource>().Stop();
     }
 
     //Call note spawn method according to noteDelay

@@ -26,7 +26,7 @@ public class MenuSoundManager : MonoBehaviour
         // Menu scenes: 0,1,2,3,4
         // Non-menu:    5,6
         var index = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
-        if (!menuMusic.isPlaying && index < 5)
+		if (menuMusic != null && !menuMusic.isPlaying && index < 5)
             menuMusic.Play();
 	}
 
@@ -35,7 +35,8 @@ public class MenuSoundManager : MonoBehaviour
 	/// </summary>
 	public void PlayForwardSound()
 	{
-		forwardSound.Play ();
+		if (forwardSound != null)
+			forwardSound.Play ();
 	}
 
 	/// <summary>
@@ -43,6 +44,7 @@ public class MenuSoundManager : MonoBehaviour
 	/// </summary>
 	public void PlayBackwardSound()
 	{
-		backwardSound.Play ();
+		if (backwardSound != null)
+			backwardSound.Play ();
 	}
 }
