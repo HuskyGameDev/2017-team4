@@ -423,6 +423,8 @@ MonoBehaviour:
   - {fileID: 114812956847668980, guid: ca1f7bb137f2ede489da09063f1f8cf0, type: 2}
   - {fileID: 114331426214529980, guid: 0c8a26e71a78f5248aff24fe04637ef7, type: 2}
   - {fileID: 114547318718288946, guid: a203e47c18aa65246a2c636e6d8c17a2, type: 2}
+  sprite: {fileID: 797762643}
+  pStats: {fileID: 1686475230}
 --- !u!1 &297918261
 GameObject:
   m_ObjectHideFlags: 0
