@@ -28,6 +28,7 @@ public class ResultsValues : MonoBehaviour
     public void SetScore(int _score)
     {
         score = _score;
+		Debug.Log(score);
     }
 
     /// <summary>

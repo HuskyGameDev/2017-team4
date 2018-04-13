@@ -34,6 +34,6 @@ public class ScoreDisplay : MonoBehaviour
     {
         score += amount;
         scoreText.text = "Score: " + score.ToString().PadLeft(8,'0');
-        results.SetScore(results.GetScore() + 1);
+        results.SetScore(score);
     }
 }
