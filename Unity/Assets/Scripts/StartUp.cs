@@ -21,6 +21,9 @@ public class StartUp : MonoBehaviour
     private float noteDelay;
     //Delay between note spawns
 
+    public SpriteRenderer sprite;   // player's sprite renderer
+    public PlayerStats pStats;      // player stats
+
     // Use this for initialization
     void Start()
     {
@@ -53,6 +56,8 @@ public class StartUp : MonoBehaviour
         var menumusic = GameObject.Find("MenuMusic");
 		if (menumusic != null)
 			menumusic.GetComponent<AudioSource>().Stop();
+
+        sprite.sprite = pStats.getCostume();
     }
 
     //Call note spawn method according to noteDelay

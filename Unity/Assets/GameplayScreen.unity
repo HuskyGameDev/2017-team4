@@ -821,6 +821,8 @@ MonoBehaviour:
   - {fileID: 114547318718288946, guid: a203e47c18aa65246a2c636e6d8c17a2, type: 2}
   results: {fileID: 1287041200}
   endGame: {fileID: 1835763589}
+  sprite: {fileID: 797762643}
+  pStats: {fileID: 690150364}
 --- !u!1 &297918261
 GameObject:
   m_ObjectHideFlags: 0
