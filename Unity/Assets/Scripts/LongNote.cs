@@ -9,6 +9,7 @@ public class LongNote : MonoBehaviour {
 	public ActionSuccess actionSuccess;
 	private float timePressed;
 	private float timeStartPressed;
+	private bool heldNote;
 
 	// Use this for initialization
 	void Start()
@@ -18,6 +19,7 @@ public class LongNote : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		timePressed = 0.0F;
 		timeStartPressed = 0.0F;
+		heldNote = false;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -37,64 +39,113 @@ public class LongNote : MonoBehaviour {
 		if (noteQueue.Count == 0)
 			return;
 		var note = noteQueue.Peek ();
-
 		var acc = (1.28F - Mathf.Abs(note.gameObject.transform.position.y - (-0.67F))) / 1.28;
 
-		if (Input.GetKeyDown (KeyCode.Q)) {
-			if (acc >= 0.4) {
-				note.SetSpeed (0.0F);
-				Debug.Log ("Started Pressing note: " + note.GetNoteKey());
-				timeStartPressed = Time.time;
+		if (note.GetNoteKey ().ToString () == "Q" ||
+			note.GetNoteKey ().ToString () == "W" ||
+			note.GetNoteKey ().ToString () == "E" ||
+			note.GetNoteKey ().ToString () == "R") {
+			return;
+		}
+
+		if (note.GetNoteKey ().ToString() == "A" ||
+			note.GetNoteKey ().ToString() == "S" ||
+			note.GetNoteKey ().ToString() == "D" ||
+			note.GetNoteKey ().ToString() == "F") {
+
+			if (Input.GetKeyDown (KeyCode.Q)) {
+				if (acc >= 0.4) {
+					note.SetSpeed (0.0F);
+					timeStartPressed = Time.time;
+					heldNote = true;
+				}
+			}
+			if (Input.GetKeyUp (KeyCode.Q)) {
+				timePressed = Time.time - timeStartPressed;
+				Destroy(note.gameObject);
+				heldNote = false;
+				anim.Play("miss");
+				actionSuccess.AdjustSuccessRate(-5);
+			}
+				
+			if (Input.GetKeyDown (KeyCode.W)) {
+				if (acc >= 0.4) {
+					note.SetSpeed (0.0F);
+					timeStartPressed = Time.time;
+					heldNote = true;
+				}
+			}
+			if (Input.GetKeyUp (KeyCode.W)) {
+				timePressed = Time.time - timeStartPressed;
+				Destroy(note.gameObject);
+				heldNote = false;
+				anim.Play("miss");
+				actionSuccess.AdjustSuccessRate(-5);
+			}
+
+
+			if (Input.GetKeyDown (KeyCode.E)) {
+				if (acc >= 0.4) {
+					note.SetSpeed (0.0F);
+					timeStartPressed = Time.time;
+					heldNote = true;
+				}
+			}
+			if (Input.GetKeyUp (KeyCode.E)) {
+				timePressed = Time.time - timeStartPressed;
+				Destroy(note.gameObject);
+				heldNote = false;
+				anim.Play("miss");
+				actionSuccess.AdjustSuccessRate(-5);
+			}
+
+
+			if (Input.GetKeyDown (KeyCode.R)) {
+				if (acc >= 0.4) {
+					note.SetSpeed (0.0F);
+					timeStartPressed = Time.time;
+					heldNote = true;
+				}
+			}
+			if (Input.GetKeyUp (KeyCode.R)) {
+				timePressed = Time.time - timeStartPressed;
+				Destroy(note.gameObject);
+				heldNote = false;
+				anim.Play("miss");
+				actionSuccess.AdjustSuccessRate(-5);
+			}
+
+			if (heldNote) {
+				timePressed = Time.time - timeStartPressed;
+				if (timePressed >= 0.4F) {
+					if (acc <= 0.4F)
+					{
+						anim.Play("bad");
+						scoreDisplay.IncreaseScore(10);
+						actionSuccess.AdjustSuccessRate(-1);
+					}
+					if (acc > 0.4F && acc <= 0.75F)
+					{
+						anim.Play("okay");
+						scoreDisplay.IncreaseScore(25);
+						actionSuccess.AdjustSuccessRate(0);
+					}
+					if (acc > 0.75F && acc <= 0.9F)
+					{
+						anim.Play("good");
+						scoreDisplay.IncreaseScore(50);
+						actionSuccess.AdjustSuccessRate(1);
+					}
+					if (acc > 0.9F)
+					{
+						anim.Play("perfect");
+						scoreDisplay.IncreaseScore(100);
+						actionSuccess.AdjustSuccessRate(2);
+					}
+					Destroy (note.gameObject);
+					heldNote = false;
+				}
 			}
 		}
-		if (Input.GetKeyUp (KeyCode.Q)) {
-			timePressed = Time.time - timeStartPressed;
-			Debug.Log ("Released note: " + note.GetNoteKey() + " timePressed: " + timePressed);
-			Destroy(note.gameObject);
-		}
-
-
-		if (Input.GetKeyDown (KeyCode.W)) {
-			if (acc >= 0.4) {
-				note.SetSpeed (0.0F);
-				Debug.Log ("Started Pressing note: " + note.GetNoteKey());
-				timeStartPressed = Time.time;
-			}
-		}
-		if (Input.GetKeyUp (KeyCode.W)) {
-			timePressed = Time.time - timeStartPressed;
-			Debug.Log ("Released note: " + note.GetNoteKey() + " timePressed: " + timePressed);
-			Destroy(note.gameObject);
-		}
-
-
-		if (Input.GetKeyDown (KeyCode.E)) {
-			if (acc >= 0.4) {
-				note.SetSpeed (0.0F);
-				Debug.Log ("Started Pressing note: " + note.GetNoteKey());
-				timeStartPressed = Time.time;
-			}
-		}
-		if (Input.GetKeyUp (KeyCode.E)) {
-			timePressed = Time.time - timeStartPressed;
-			Debug.Log ("Released note: " + note.GetNoteKey() + " timePressed: " + timePressed);
-			Destroy(note.gameObject);
-		}
-
-
-		if (Input.GetKeyDown (KeyCode.R)) {
-			if (acc >= 0.4) {
-				note.SetSpeed (0.0F);
-				Debug.Log ("Started Pressing note: " + note.GetNoteKey());
-				timeStartPressed = Time.time;
-			}
-		}
-		if (Input.GetKeyUp (KeyCode.R)) {
-			timePressed = Time.time - timeStartPressed;
-			Debug.Log ("Released note: " + note.GetNoteKey() + " timePressed: " + timePressed);
-			Destroy(note.gameObject);
-		}
-
-
 	}
 }

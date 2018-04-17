@@ -53,6 +53,13 @@ void AttemptHitNote(KeyCode key)
 			return;
 		var note = noteQueue.Peek();
 
+		if (note.GetNoteKey ().ToString () == "A" ||
+		    note.GetNoteKey ().ToString () == "S" ||
+		    note.GetNoteKey ().ToString () == "D" ||
+		    note.GetNoteKey ().ToString () == "F") {
+			return;
+		}
+
         if (note.GetNoteKey() == key)
         {
             var acc = (1.28F - Mathf.Abs(note.gameObject.transform.position.y - (-0.67F))) / 1.28;
