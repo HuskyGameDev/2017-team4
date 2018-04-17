@@ -102,17 +102,14 @@ public class LevelInfo : MonoBehaviour
 			return 0;
 		}
 	}
-	
-	/// <summary>
-	/// Gets the song title.
-	/// </summary>
-	/// <returns>The song title.</returns>
+
+
 	public string GetSongTitle()
 	{
 		switch (titleIndex)
 		{
 		case 1:
-			return "Theme of Digital Demon";
+			return "Theme of DD";
 		case 2:
 			return "Silky Smooth Idea";
 		case 3:
