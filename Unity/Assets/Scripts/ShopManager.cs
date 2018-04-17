@@ -12,53 +12,43 @@ public class ShopManager : MonoBehaviour
     public Text[] statCostTexts;
     public PlayerStats playerStats;
     public Text scoreDisplay;
-	public Text dialogueBox;
 
     private int[] statCosts;
-	private Sprite tempSprite;
-
-	public Image currentOutfit;
     
     // Use this for initialization
     void Start()
     {
-		playerStats.AdjustScore(20);
+        playerStats.AdjustScore(100);
+        statCosts = new int[3] { 10, 10, 10 };
 
-		tempSprite = playerStats.getCostume();
-		currentOutfit.sprite = tempSprite;
-		dialogueBox.text = "Welcome to the Costume Shop!";
+        statCostTexts[0].text = statCosts[0].ToString();
+        statCostTexts[1].text = statCosts[1].ToString();
+        statCostTexts[2].text = statCosts[2].ToString();
+
         scoreDisplay.text = "Score: " + playerStats.GetScore().ToString();
     }
 
-	public void setTempSprite (Sprite current)
-	{
-		tempSprite = current;
-	}
-
-	public void ButtonClick (int cost) {
-		int temp = playerStats.GetScore () - cost;
-
-		if (playerStats.checkPurchased (cost) == false) {
-			if (temp < 0) {
-				dialogueBox.text = "Sorry, not enough points.";
-				return;
-			}
-
-			playerStats.purchase (cost);
-			playerStats.AdjustScore (0 - cost);
-			currentOutfit.sprite = tempSprite;
-			playerStats.setCostume(tempSprite);
-			dialogueBox.text = "Costume purchased successfully!";
-		} else {
-			currentOutfit.sprite = tempSprite;
-			playerStats.setCostume(tempSprite);
-			dialogueBox.text = "Costume changed.";
-		}
-		if (cost == 0){
-			dialogueBox.text = "Back to basics!";
-		}
-		scoreDisplay.text = "Score: " + playerStats.GetScore().ToString();
-
-	}
-		
+    public void PurchaseStat(int statIndex)
+    {
+        var currentScore = playerStats.GetScore();
+        if (currentScore < statCosts[statIndex])
+            return;
+        switch (statIndex)
+        {            
+            case 1:                
+                // buy attack (force)                    
+                playerStats.AdjustForceStat(1);
+                break;
+            case 2:
+                // buy evasion (dexterity)
+                playerStats.AdjustDexterityStat(1);
+                break;
+            default:
+                // buy defense (resistance)
+                playerStats.AdjustResistanceStat(1);
+                break;
+        }
+        playerStats.AdjustScore(-statCosts[statIndex]);
+        scoreDisplay.text = "Score: " + playerStats.GetScore().ToString();
+    }
 }
