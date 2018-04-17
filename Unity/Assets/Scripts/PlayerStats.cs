@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         score = 0;
-        maxHealth = 999;
+        maxHealth = 750;
         force = 1;
         res = 1;
         dex = 1;

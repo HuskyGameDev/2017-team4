@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: d63ae90f204d0e743984fd6ed1abea87
   - enabled: 1
     path: Assets/StatShop.unity
-    guid: 86d0c65c407285e4d878faa1cdc0f817
+    guid: 181454e5a45bc934e8295322299564dd
   - enabled: 1
     path: Assets/Settings.unity
     guid: 02a366399fa4d7d4d9ac8110d67da68b
@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ResultsPage.unity
     guid: 678a3a31bf319b54e94d8701decb3487
+  - enabled: 1
+    path: Assets/GameOverScreen.unity
+    guid: 56e926b7d67a8b64e9dbedaa2ccd44eb

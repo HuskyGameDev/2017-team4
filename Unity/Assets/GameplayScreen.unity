@@ -2302,6 +2302,7 @@ MonoBehaviour:
   - {fileID: 194065916}
   - {fileID: 458814724}
   - {fileID: 1992298827}
+  endGame: {fileID: 1835763589}
   playerDamageDisplay: {fileID: 2016844237}
   enemyDamageDisplay: {fileID: 1072315541}
 --- !u!1 &834453641

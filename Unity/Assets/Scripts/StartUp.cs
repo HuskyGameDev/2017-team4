@@ -56,8 +56,9 @@ public class StartUp : MonoBehaviour
         var menumusic = GameObject.Find("MenuMusic");
 		if (menumusic != null)
 			menumusic.GetComponent<AudioSource>().Stop();
-
-        sprite.sprite = pStats.getCostume();
+	
+		if (pStats.getCostume() != null)
+        	sprite.sprite = pStats.getCostume();
     }
 
     //Call note spawn method according to noteDelay

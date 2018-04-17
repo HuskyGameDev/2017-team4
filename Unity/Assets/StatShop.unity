@@ -1657,8 +1657,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 792675738}
   m_HandleRect: {fileID: 792675737}
   m_Direction: 0
-  m_Value: 0.5
-  m_Size: 0.9999999
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2536,6 +2536,7 @@ MonoBehaviour:
   playerStats: {fileID: 38432736}
   scoreDisplay: {fileID: 1698819305}
   dialogueBox: {fileID: 1029470334}
+  pStats: {fileID: 38432736}
   currentOutfit: {fileID: 267556029}
 --- !u!1 &1941891024
 GameObject:
@@ -2613,7 +2614,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 835738524}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.60999995
+  m_Size: 0.61
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

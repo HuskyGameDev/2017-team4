@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
 	public ResultsValues results;
 	// sounds for each player action
 	public AudioSource[] actionSounds;
+	
+	public EndGame endGame;
+
 	//Display damage text
 	public Text playerDamageDisplay;
 	public Text enemyDamageDisplay;
@@ -88,44 +91,43 @@ public class Player : MonoBehaviour
     /// </summary>
     /// <param name="enemyForce">Enemy force.</param>
     /// <param name="enemyAccuracy">Enemy accuracy.</param>
-    public void DamagePlayer(int potentialDamage)
-    {
-        var trueDamage = 0;
-        // player can evade
-        if (actionStock.Count > 0 && actionStock.Peek().Equals("evade"))
-        {
-            // calculate chance of successful evasion
-            if (!CalculateEvasion())
-                trueDamage = potentialDamage * Random.Range(1, 15);
-            else
-            {				
-                anim.Play("PlayerEvade");
-                actionSounds[2].Play();
-            }
-            DequeueStockIcons();
-        }
+    public void DamagePlayer (int potentialDamage)
+	{
+		var trueDamage = 0;
+		// player can evade
+		if (actionStock.Count > 0 && actionStock.Peek ().Equals ("evade")) {
+			// calculate chance of successful evasion
+			if (!CalculateEvasion ())
+				trueDamage = potentialDamage * Random.Range (1, 15);
+			else {				
+				anim.Play ("PlayerEvade");
+				actionSounds [2].Play ();
+			}
+			DequeueStockIcons ();
+		}
 		// player can defend
-		else if (actionStock.Count > 0 && actionStock.Peek().Equals("defend"))
-        {   
-            // damage - shielded amount
-            trueDamage = potentialDamage * Random.Range(1, 15) * (100 - CalculateDefend(potentialDamage)) / 100;
-            anim.Play("PlayerDefend");
-            actionSounds[0].Play();
-            DequeueStockIcons();
-        }
+		else if (actionStock.Count > 0 && actionStock.Peek ().Equals ("defend")) {   
+			// damage - shielded amount
+			trueDamage = potentialDamage * Random.Range (1, 15) * (100 - CalculateDefend (potentialDamage)) / 100;
+			anim.Play ("PlayerDefend");
+			actionSounds [0].Play ();
+			DequeueStockIcons ();
+		}
 		// player has no stocked actions
 		else
-            trueDamage = potentialDamage * Random.Range(1, 15);
-        playerHealth -= trueDamage;
-        results.SetDamageTaken(trueDamage + results.GetDamageTaken());
+			trueDamage = potentialDamage * Random.Range (1, 15);
+		playerHealth -= trueDamage;
+		results.SetDamageTaken (trueDamage + results.GetDamageTaken ());
 
 		//Set damage taken text
-		playerDamageDisplay.text = trueDamage.ToString();
-		pDamageTextAnim.Play("showDamage");
+		playerDamageDisplay.text = trueDamage.ToString ();
+		pDamageTextAnim.Play ("showDamage");
 
 		// for now, reset player health if killed
-		if (playerHealth < 0)
-			playerHealth = pStats.GetMaxHealth();
+		if (playerHealth <= 0) 
+		{
+			endGame.GoToGameOver();
+		}
 		// set health text
 		playerHealthDisplay.text = playerHealth + "/" + pStats.GetMaxHealth();
 	}

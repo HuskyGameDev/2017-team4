@@ -28,16 +28,24 @@ public class EndGame : MonoBehaviour
         InvokeRepeating("FadeToResults", 2.9F, fadeDelay);
     }
 
+	/// <summary>
+	/// Goes to game over screen.
+	/// </summary>
+	public void GoToGameOver()
+	{
+		sceneTransition.LoadScene(7);
+	}
+
     /// <summary>
     /// Increases the opacitiy of the fade image.
     /// </summary>
-    private void FadeToResults()
-    {
-        // transition once fade is completed
-        if (fade.color.a == 1.0F)
-            sceneTransition.LoadScene(6);
-        var fadeColor = fade.color;
-        fadeColor.a = Mathf.Clamp(fadeColor.a + fadeAmount, 0.0F, 1.0F);
-        fade.color = fadeColor;
-    }
+    private void FadeToResults ()
+	{
+		// transition once fade is completed
+		if (fade.color.a == 1.0F)
+			sceneTransition.LoadScene (6);
+		var fadeColor = fade.color;
+		fadeColor.a = Mathf.Clamp (fadeColor.a + fadeAmount, 0.0F, 1.0F);
+		fade.color = fadeColor;
+	}
 }

@@ -20,12 +20,14 @@ public class ShopManager : MonoBehaviour
     public Image currentOutfit;
 
     // Use this for initialization
-    void Start()
-    {
-        playerStats.AdjustScore(20);
-
-        tempSprite = playerStats.getCostume();
-        currentOutfit.sprite = tempSprite;
+    void Start ()
+	{
+		playerStats.AdjustScore (20);
+		if (playerStats.getCostume() != null)
+		{
+			tempSprite = playerStats.getCostume ();
+			currentOutfit.sprite = tempSprite;
+		}
         dialogueBox.text = "Welcome to the Costume Shop!";
         scoreDisplay.text = "Score: " + playerStats.GetScore().ToString();
     }
