@@ -4,16 +4,30 @@ using UnityEngine;
 
 public class MenuSoundManager : MonoBehaviour
 {
-	private AudioSource forwardSound;
-	private AudioSource backwardSound;
+	private static AudioSource forwardSound;
+	private static AudioSource backwardSound;
+    private static AudioSource menuMusic;
+    private float playtime;
 
 	// Use this for initialization
 	void Start ()
 	{
 		var sounds = GameObject.FindGameObjectsWithTag ("PersistentMenuSound");
 		// DFS - Ensure Forward is listed first
-		forwardSound = sounds [0].GetComponent<AudioSource>();
-		backwardSound = sounds [1].GetComponent<AudioSource>();
+        foreach (var sound in sounds)
+        {
+            if (forwardSound == null && sound.name == "ForwardSound")
+                forwardSound = sound.GetComponent<AudioSource>();
+            else if (backwardSound == null && sound.name == "BackwardSound")
+                backwardSound = sound.GetComponent<AudioSource>();
+            else
+                menuMusic = sound.GetComponent<AudioSource>();
+        }
+        // Menu scenes: 0,1,2,3,4
+        // Non-menu:    5,6
+        var index = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+		if (menuMusic != null && !menuMusic.isPlaying && index < 5)
+            menuMusic.Play();
 	}
 
 	/// <summary>
@@ -21,7 +35,8 @@ public class MenuSoundManager : MonoBehaviour
 	/// </summary>
 	public void PlayForwardSound()
 	{
-		forwardSound.Play ();
+		if (forwardSound != null)
+			forwardSound.Play ();
 	}
 
 	/// <summary>
@@ -29,6 +44,7 @@ public class MenuSoundManager : MonoBehaviour
 	/// </summary>
 	public void PlayBackwardSound()
 	{
-		backwardSound.Play ();
+		if (backwardSound != null)
+			backwardSound.Play ();
 	}
 }

@@ -43,6 +43,10 @@ public class StartUp : MonoBehaviour
 		//Initialize time
 		spawnTime = 0F;
 
+        var menumusic = GameObject.Find("MenuMusic");
+		if (menumusic != null)
+			menumusic.GetComponent<AudioSource>().Stop();
+
 		sprite.sprite = pStats.getCostume();
 	}
 

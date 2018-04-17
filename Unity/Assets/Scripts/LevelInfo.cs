@@ -12,7 +12,8 @@ public class LevelInfo : MonoBehaviour
     // Title:
     //  0 = Theme of Digital Demon™
     //  1 = Silky Smooth Idea
-    //  2  = It's A Trap
+    //  2 = It's A Trap
+	//	3 = RIP Stat Shop
     static int titleIndex;
 
 
@@ -69,6 +70,9 @@ public class LevelInfo : MonoBehaviour
             case 3:
                 // Trap
                 return 120;
+			case 4:
+				//RIP
+				return 135; 
             default:
                 return 0;
         }
@@ -91,6 +95,9 @@ public class LevelInfo : MonoBehaviour
 		case 3:
 			// Trap
 			return 359;
+		case 4:
+			//RIP
+			return 271;
 		default:
 			return 0;
 		}
@@ -107,8 +114,35 @@ public class LevelInfo : MonoBehaviour
 			return "Silky Smooth Idea";
 		case 3:
 			return "It's a Trap";
+		case 4:
+			return "RIP Stat Shop";
 		default:
 			return "TEST";
 		}
 	}
+
+    /// <summary>
+    /// Gets the song's score requirement for the current index.
+    /// </summary>
+    /// <returns>The song bpm.</returns>
+    public int GetSongScoreRequirement()
+    {
+        switch (titleIndex)
+        {
+            case 1:
+                // Theme of DD
+                return 32100 + 5000;
+            case 2:
+                // Silky
+                return 12900 + 5000;
+            case 3:
+                // Trap
+                return 35900 + 5000;
+			case 4:
+                // Trap
+                return 23900 + 5000;
+            default:
+                return 0;
+        }
+    }
 }

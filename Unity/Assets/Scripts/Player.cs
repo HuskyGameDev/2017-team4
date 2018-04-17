@@ -98,7 +98,13 @@ public class Player : MonoBehaviour
 		var attack = actionSuccess.getActionSuccess (1);
 		var enemyResistance = enemy.GetEnemyResistance ();
 
-		return (int)(attack / 5.0F + Random.Range (-enemyResistance, enemyResistance / 5.0F));
+		//Set damage given text
+		if (enemy.IsEnemyAlive () && rtn >= 0) 
+		{
+			enemyDamageDisplay.text = rtn.ToString ();
+			eDamageTextAnim.Play ("showDamage");
+		}
+		return rtn > 0 ? rtn : 0;
 	}
 
 	//Calculate amount of damage to reduce for defend

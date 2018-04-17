@@ -26,6 +26,7 @@ public class ScoreDisplay : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         score += amount;
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Score: " + score.ToString().PadLeft(8,'0');
+        results.SetScore(score);
     }
 }

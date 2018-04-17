@@ -28,10 +28,14 @@ public class EnemySpawner : MonoBehaviour
     /// <summary>
     /// Performs the enemy action.
     /// </summary>
-    public void PerformEnemyAction()
-    {
-        player.DamagePlayer(currentEnemy.force);    
-    }
+    public void PerformEnemyAction ()
+	{
+		//Perform action if enemy is alive
+		if (IsEnemyAlive ()) 
+		{
+			player.DamagePlayer (currentEnemy.force);    
+		}
+	}
 
     /// <summary>
     /// Damages the player.
@@ -40,8 +44,9 @@ public class EnemySpawner : MonoBehaviour
     /// <param name="enemyAccuracy">Enemy accuracy.</param>
     public void DamageEnemy(int force, int accuracy = 100)
     {
-        currentEnemyHealth -= force * Random.Range(1, 15);
-        if (currentEnemyHealth < 0)
+        currentEnemyHealth -= force;
+        results.SetDamageDealt(force + results.GetDamageDealt());
+        if (currentEnemyHealth <= 0)
         {
             Destroy(currentEnemy.gameObject);
             Invoke("SpawnEnemy", 5);
