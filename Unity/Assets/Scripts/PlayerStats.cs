@@ -110,10 +110,10 @@ public class PlayerStats : MonoBehaviour
 
 	public bool checkPurchased(int key)
 	{
-		if (purchasedCostumes == null)
+		/*if (purchasedCostumes == null)
 			Debug.Log ("List");
 		if (key == null)
-			Debug.Log ("Key");
+			Debug.Log ("Key");*/
 		return purchasedCostumes.Contains (key);
 	}
 
