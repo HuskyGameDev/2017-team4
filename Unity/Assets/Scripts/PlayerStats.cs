@@ -10,10 +10,6 @@ public class PlayerStats : MonoBehaviour
     static int res;
     static int dex;
 
-	static List<int> purchasedCostumes;
-
-	static Sprite costume;
-
     void Start()
     {
         score = 0;
@@ -21,9 +17,6 @@ public class PlayerStats : MonoBehaviour
         force = 1;
         res = 1;
         dex = 1;
-		purchasedCostumes = new List<int>();
-		purchasedCostumes.Add (0);
-		costume = new Sprite ();
     }
 
     /// <summary>
@@ -107,27 +100,4 @@ public class PlayerStats : MonoBehaviour
     {
         dex += amount;
     }
-
-	public bool checkPurchased(int key)
-	{
-		/*if (purchasedCostumes == null)
-			Debug.Log ("List");
-		if (key == null)
-			Debug.Log ("Key");*/
-		return purchasedCostumes.Contains (key);
-	}
-
-	public void purchase(int key) {
-		purchasedCostumes.Add (key);
-	}
-
-	public void setCostume(Sprite newCostume)
-	{
-		costume = newCostume;
-	}
-
-	public Sprite getCostume()
-	{
-		return costume;
-	}
 }

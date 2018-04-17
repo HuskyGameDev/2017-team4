@@ -14,14 +14,16 @@ public class ATB : MonoBehaviour
 	public bool isEnemy;
 	private float fillTime;
 
-    // Use this for initialization
-    void Start()
-    {
-        fillTime = 0F;
-        // start the fill bar at 0 %
-        fillBar.transform.localScale = new Vector3(0, 1, 1);
-    }
-
+	// Use this for initialization
+	void Start ()
+	{
+		fillTime = 0F;
+		// start the fill bar at 0 %
+		fillBar.transform.localScale = new Vector3 (0, 1, 1);
+		if (actionGradient != null) // Unity spits out false errors without this
+			actionGradient.transform.localScale = new Vector3 (0, 0, 1);
+	}
+	
 	// Update is called once per frame
 	void Update ()
 	{
